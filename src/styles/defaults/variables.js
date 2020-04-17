@@ -21,5 +21,11 @@ export const variables = css`
         /* Font */
         --font-content: 'Titillium Web', sans-serif;
         --font-title: 'Khand', sans-serif;
+
+        /* Padding */
+        --padding-content: 0.5em;
+
+        /* Margin */
+        --margin-block: 1em;
     } 
 `

@@ -21,3 +21,11 @@ export const font = {
   content: 'var(--font-content)',
   title: 'var(--font-title)'
 }
+
+export const padding = {
+  content: 'var(--padding-content)'
+}
+
+export const margin = {
+  block: 'var(--margin-block)'
+}
