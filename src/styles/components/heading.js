@@ -1,6 +1,6 @@
 import { css }  from 'styled-components'
 
-import { size } from '../../config/siteConstants'
+import { size, font } from '../../config/siteConstants'
 
 export const heading = css`
   h1, h2, h3, h4 {
@@ -9,10 +9,12 @@ export const heading = css`
 
   h1 {
     font-size: ${size.text.h1};
+    font-family: ${font.title};
   }
 
   h2 {
     font-size: ${size.text.h2};
+    font-family: ${font.title};
   }
 
   h3 {

@@ -19,7 +19,7 @@ export const variables = css`
         --size-h4: 1.4em;
 
         /* Font */
-        --font-content: sans-serif;
-        --font-title: sans-serif;
+        --font-content: 'Titillium Web', sans-serif;
+        --font-title: 'Khand', sans-serif;
     } 
 `

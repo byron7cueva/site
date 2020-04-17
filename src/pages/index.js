@@ -8,5 +8,6 @@ export default () => (
     <h2>Hola mundo!</h2>
     <h3>Hola mundo!</h3>
     <h4>Hola mundo!</h4>
+    <p>Esto es una prueba</p>
   </>
 )
