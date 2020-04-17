@@ -10,6 +10,6 @@ export const defaults = css`
 
   body {
     font-family: ${font.content};
-    font-size: ${size.text};
+    font-size: ${size.text.content};
   }
 `

@@ -8,7 +8,13 @@ export const color = {
 }
 
 export const size = {
-  text: 'var(--size-text)'
+  text: {
+    content: 'var(--size-text)',
+    h1: 'var(--size-h1)',
+    h2: 'var(--size-h2)',
+    h3: 'var(--size-h3)',
+    h4: 'var(--size-h4)'
+  }
 }
 
 export const font = {
