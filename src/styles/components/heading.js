@@ -1,10 +1,11 @@
 import { css }  from 'styled-components'
 
-import { size, font } from '../../config/siteConstants'
+import { color, font, size, margin } from '../../config/siteConstants'
 
 export const heading = css`
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    margin-bottom: ${margin.text}
   }
 
   h1 {
@@ -19,5 +20,17 @@ export const heading = css`
 
   h3 {
     font-size: ${size.text.h3};
+  }
+
+  h5 {
+    color: ${color.secondary};
+    font-size: 1.3em;
+    font-weight: normal;
+  }
+
+  h6 {
+    color: ${color.light};
+    font-size: 1.5em;
+    font-weight: normal;
   }
 `

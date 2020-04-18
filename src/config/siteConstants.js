@@ -28,7 +28,8 @@ export const padding = {
 }
 
 export const margin = {
-  block: 'var(--margin-block)'
+  block: 'var(--margin-block)',
+  text: 'var(--margin-text)'
 }
 
 export const zIndex = {

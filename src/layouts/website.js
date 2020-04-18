@@ -9,6 +9,8 @@ export const Layout = ({ children }) => (
     <Style />
     <LogoSection />
     <MenuButton />
-    {children}
+    <main>
+      {children}
+    </main>
   </>
 )

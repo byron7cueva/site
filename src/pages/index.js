@@ -1,9 +1,10 @@
 import React from "react"
 
 import { Layout } from '../layouts/website'
+import { Hero } from '../sections/Hero'
 
 export default () => (
   <Layout>
-    <h1>Hola mundo</h1>
+    <Hero />
   </Layout>
 )

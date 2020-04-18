@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { font, size } from '../../config/siteConstants'
+import { color, font, size } from '../../config/siteConstants'
 
 export const defaults = css`
   html, body {
@@ -11,5 +11,6 @@ export const defaults = css`
   body {
     font-family: ${font.content};
     font-size: ${size.text.content};
+    color: ${color.dark};
   }
 `

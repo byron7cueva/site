@@ -28,6 +28,7 @@ export const variables = css`
 
         /* Margin */
         --margin-block: 1em;
+        --margin-text: 0.5em;
 
         /* z-index*/
         --z-index-logo: 1;
