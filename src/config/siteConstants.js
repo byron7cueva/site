@@ -14,7 +14,8 @@ export const size = {
     h2: 'var(--size-h2)',
     h3: 'var(--size-h3)',
     h4: 'var(--size-h4)'
-  }
+  },
+  icon: 'var(--size-icon)'
 }
 
 export const font = {
