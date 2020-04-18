@@ -1,11 +1,13 @@
 import { css } from 'styled-components'
 
+import { color } from '../../config/constants'
+
 export const variables = css`
     :root {
         /* Color */
         --color-primary : #1e85e6;
         --color-secondary: #1dd1a1;
-        --color-alternative: #525b83;
+        --color-alternative: rgb(${color.rgb.alternative});
         --color-light: #fdfdfb;
         --color-dark: #272c4a;
         --color-gray: #dfe6e9;
@@ -27,5 +29,9 @@ export const variables = css`
 
         /* Margin */
         --margin-block: 1em;
+
+        /* z-index*/
+        --z-index-logo: 1;
+        --z-index-menu: 2;
     } 
 `

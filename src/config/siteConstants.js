@@ -29,3 +29,8 @@ export const padding = {
 export const margin = {
   block: 'var(--margin-block)'
 }
+
+export const zIndex = {
+  logo: 'var(--z-index-logo)',
+  menu: 'var(--z-index-menu)'
+}
