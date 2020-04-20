@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
 import { AboutSection, AboutContent } from './style'
+import data from '../../../content/about.yml'
 
 export const About = () => {
   const {
@@ -31,11 +32,9 @@ export const About = () => {
   )
   return (
     <AboutSection>
-      <h2>Sobre mi</h2>
+      <h2>{data.title}</h2>
       <AboutContent>
-        <p>
-          Soy Ingeniero en Sistemas Computacionales, tengo 6 años de experiencia en desarrollo de software. Me apasiona la tecnología e investigación, me gustan los retos mucho mejor si estos involucran el aprendizaje. Pienso que la mejor manera de viajar acorde al tiempo es automatizando procesos y que un buen trabajo depende de cuánto y cómo lo mides o validas.
-        </p>
+        <p>{data.content}</p>
         <BackgroundImage
           Tag='figure'
           className='about-content__photo'
