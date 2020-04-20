@@ -9,7 +9,7 @@ export const variables = css`
         --color-secondary: #1dd1a1;
         --color-alternative: rgb(${color.rgb.alternative});
         --color-light: rgb(${color.rgb.light});
-        --color-dark: #272c4a;
+        --color-dark: rgb($color.rgb.dark);
         --color-gray: #dfe6e9;
 
         /* Size */

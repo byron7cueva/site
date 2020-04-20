@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 import { color, font, size } from '../../config/siteConstants'
 
 export const defaults = css`
-  html, body {
+  html, body, p {
     margin: 0;
     padding: 0;
   }

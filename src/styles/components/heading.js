@@ -18,7 +18,7 @@ export const heading = css`
     padding-left: 1.2em;
     float: right;
     display: block;
-    margin-right: 20%;
+    margin: 0 18%;
     font-size: ${size.text.h2};
     font-weight: lighter;
     color: ${color.primary};
