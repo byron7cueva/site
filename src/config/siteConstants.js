@@ -24,7 +24,8 @@ export const font = {
 }
 
 export const padding = {
-  content: 'var(--padding-content)'
+  content: 'var(--padding-content)',
+  block: 'var(--padding-block)'
 }
 
 export const margin = {

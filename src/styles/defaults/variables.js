@@ -25,6 +25,7 @@ export const variables = css`
 
         /* Padding */
         --padding-content: 0.5em;
+        --padding-block: 1em;
 
         /* Margin */
         --margin-block: 1em;
