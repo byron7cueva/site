@@ -21,7 +21,6 @@ export const heading = css`
     margin: 0 18%;
     font-size: ${size.text.h2};
     font-weight: lighter;
-    color: ${color.primary};
     ::before {
       position: absolute;
       left: 0;

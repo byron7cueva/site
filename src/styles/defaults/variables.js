@@ -10,7 +10,7 @@ export const variables = css`
         --color-alternative: rgb(${color.rgb.alternative});
         --color-light: rgb(${color.rgb.light});
         --color-dark: rgb($color.rgb.dark);
-        --color-gray: #dfe6e9;
+        --color-gray: rgb(${color.rgb.gray});
 
         /* Size */
         --size-text: 13px;

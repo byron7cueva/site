@@ -3,6 +3,10 @@ import { css } from 'styled-components'
 import { color, font, size } from '../../config/siteConstants'
 
 export const defaults = css`
+  * {
+    box-sizing: border-box;
+  }
+
   html, body, p {
     margin: 0;
     padding: 0;
