@@ -3,7 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
-import { AboutSection, AboutContent } from './style'
+import { Section } from '../Section'
+import { AboutContent } from './style'
 import data from '../../../content/about.yml'
 
 export const About = () => {
@@ -31,8 +32,7 @@ export const About = () => {
     `
   )
   return (
-    <AboutSection>
-      <h2>{data.title}</h2>
+    <Section title={data.title}>
       <AboutContent>
         <p>{data.content}</p>
         <BackgroundImage
@@ -46,6 +46,6 @@ export const About = () => {
           <Img fluid={photo.childImageSharp.fluid} />
         </BackgroundImage>
       </AboutContent>
-    </AboutSection>
+    </Section>
   )
 }

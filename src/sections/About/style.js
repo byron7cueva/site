@@ -1,12 +1,5 @@
 import styled from 'styled-components'
 
-import { padding } from '../../config/siteConstants'
-
-export const AboutSection = styled.section`
-  overflow: hidden;
-  padding: 2em ${padding.block};
-`
-
 export const AboutContent = styled.div`
   display: flex;
   align-items: center;
