@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { color, padding } from '../../config/siteConstants'
 
 export const ExperienceContent = styled.article`
+  background-color: ${color.alternative};
+  color: ${color.light};
+  border-bottom: 1px solid ${color.secondary};
+
   .experience__cover {
     position: relative;
     display: grid;
@@ -10,11 +14,11 @@ export const ExperienceContent = styled.article`
     width: 100%;
     height: 20em;
     padding: ${padding.block};
-    color: ${color.light};
 
     h3 {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
+      text-align: center;
     }
 
     div {
@@ -25,9 +29,9 @@ export const ExperienceContent = styled.article`
     }
 
     &__date {
+      position: absolute;
       grid-column: 4;
       grid-row: 1 / 4;
-      position: absolute;
       top: 0;
       left: 0;
       transform-origin: 0 0;
@@ -35,6 +39,23 @@ export const ExperienceContent = styled.article`
       justify-content: center;
       width: 20em;
       transform: rotate(90deg);
+    }
+
+    &__date::before, &__date::after {
+      content: '';
+      width: 0.5em;
+      height: 0.5em;
+      background-color: ${color.gray};
+      border-radius: 50%;
+      margin-top: 0.5em;
+    }
+
+    &__date::before {
+      margin-right: 1em;
+    }
+
+    &__date::after {
+      margin-left: 1em;
     }
   }
 

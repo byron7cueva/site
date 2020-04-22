@@ -35,5 +35,6 @@ export const margin = {
 
 export const zIndex = {
   logo: 'var(--z-index-logo)',
-  menu: 'var(--z-index-menu)'
+  menu: 'var(--z-index-menu)',
+  headerSticky: 'var(--z-index-header-sticky)'
 }

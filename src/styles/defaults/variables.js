@@ -32,7 +32,8 @@ export const variables = css`
         --margin-text: 0.5em;
 
         /* z-index*/
-        --z-index-logo: 1;
-        --z-index-menu: 2;
+        --z-index-header-sticky: 1;
+        --z-index-logo: 2;
+        --z-index-menu: 3;
     } 
 `

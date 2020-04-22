@@ -5,21 +5,10 @@ import { padding, color as colorSite } from '../../config/siteConstants'
 
 export const SectionContent = styled.section`
   overflow: hidden;
-  padding: ${({ hasPadding }) => (
-    hasPadding ? `2em ${padding.block}` : 'none'
-  )};
-  background-color: ${props => props.theme.backgroundColor};
-  color: ${props => props.theme.color};
+  padding: 2em ${padding.block};
+  background-color: rgba(${color.rgb.gray}, 0.45);
 
   h2 {
-    color: ${props => props.theme.titleColor};
+    color: ${colorSite.primary};
   }
 `
-
-SectionContent.defaultProps = {
-  theme: {
-    backgroundColor: `rgba(${color.rgb.gray}, 0.45)`,
-    color: colorSite.dark,
-    titleColor: colorSite.primary
-  }
-}
