@@ -16,9 +16,7 @@ export const heading = css`
   h2 {
     position: relative;
     padding-left: 1.2em;
-    float: right;
-    display: block;
-    margin: 0 18%;
+    display: inline-block;
     font-size: ${size.text.h2};
     font-weight: lighter;
     ::before {

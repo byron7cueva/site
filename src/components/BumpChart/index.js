@@ -1,7 +1,6 @@
 import React from 'react'
 import { ResponsiveBump } from '@nivo/bump'
 
-import { ChartContainer } from '../ChartContainer'
 import { formatSkills } from '../../util/chart'
 import { color as colorSite } from '../../config/siteConstants'
 import { color, theme } from '../../config/chart'
@@ -31,48 +30,46 @@ const format = d => {
   }
 }
 
-export const BumpChart = ({ title, data, height, width }) => (
-  <ChartContainer title={title} height={height} width={width}>
-    <ResponsiveBump
-      height={height}
-      data={data}
-      pointComponent={CustomPoint}
-      theme={theme}
-      margin={{ top: 20, right: 150, bottom: 25, left: 150 }}
-      lineWidth={4}
-      activeLineWidth={5}
-      inactiveLineWidth={3}
-      inactiveOpacity={0.15}
-      axisTop={{ tickSize: 0, tickPadding: 9 }}
-      axisBottom={{ tickSize: 0, tickPadding: 9 }}
-      axisLeft={{
-        tickSize: 80,
-        tickPadding: 0,
-        legend: 'Prioridad de uso',
-        legendPosition: 'middle',
-        legendOffset: -140,
-        format: format,
-        scaleLineColor: 'transparent'
-      }}
-      axisRight={{
-        tickSize: 80,
-        tickPadding: 0,
-        legend: 'Prioridad de uso',
-        legendPosition: 'middle',
-        legendOffset: 140,
-        format: format
-      }}
-      startLabelPadding={10}
-      endLabelPadding={10}
-      pointSize={24}
-      pointBorderWidth={3}
-      pointBorderColor={{ from: 'serie.color' }}
-      activePointSize={25}
-      activePointBorderWidth={4}
-      inactivePointSize={0}
-      inactivePointBorderWidth={2}
-      colors={[color.blueLight, color.greenLight, color.orange, color.coral]}
-      startLabel={d => (d.id)}
-    />
-  </ChartContainer>
+export const BumpChart = ({ data, height }) => (
+  <ResponsiveBump
+    height={height}
+    data={data}
+    pointComponent={CustomPoint}
+    theme={theme}
+    margin={{ top: 20, right: 150, bottom: 25, left: 150 }}
+    lineWidth={4}
+    activeLineWidth={5}
+    inactiveLineWidth={3}
+    inactiveOpacity={0.15}
+    axisTop={{ tickSize: 0, tickPadding: 9 }}
+    axisBottom={{ tickSize: 0, tickPadding: 9 }}
+    axisLeft={{
+      tickSize: 80,
+      tickPadding: 0,
+      legend: 'Prioridad de uso',
+      legendPosition: 'middle',
+      legendOffset: -140,
+      format: format,
+      scaleLineColor: 'transparent'
+    }}
+    axisRight={{
+      tickSize: 80,
+      tickPadding: 0,
+      legend: 'Prioridad de uso',
+      legendPosition: 'middle',
+      legendOffset: 140,
+      format: format
+    }}
+    startLabelPadding={10}
+    endLabelPadding={10}
+    pointSize={24}
+    pointBorderWidth={3}
+    pointBorderColor={{ from: 'serie.color' }}
+    activePointSize={25}
+    activePointBorderWidth={4}
+    inactivePointSize={0}
+    inactivePointBorderWidth={2}
+    colors={[color.blueLight, color.greenLight, color.orange, color.coral]}
+    startLabel={d => (d.id)}
+  />
 )

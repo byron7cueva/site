@@ -1,7 +1,6 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 
-import { ChartContainer } from '../ChartContainer'
 import { color, size } from '../../config/siteConstants'
 import { color as colorChart, theme } from '../../config/chart'
 import { formatSkills } from '../../util/chart'
@@ -24,26 +23,24 @@ const BarComponent = props => (
   </g>
 )
 
-export const BarChart = ({ title, data, height }) => (
-  <ChartContainer title={title} height={height}>
-    <ResponsiveBar
-      height={height}
-      data={data}
-      barComponent={BarComponent}
-      theme={theme}
-      layout='horizontal'
-      margin={{ top: 20, right: 30, bottom: 30, left: 0 }}
-      colorBy='indexValue'
-      colors={[colorChart.orange, colorChart.greenDark, colorChart.blueLight, colorChart.coral]}
-      enableGridX
-      enableGridY={false}
-      axisLeft={null}
-      axisTop={{
-        format: formatSkills
-      }}
-      axisBottom={{
-        format: formatSkills
-      }}
-    />
-  </ChartContainer>
+export const BarChart = ({ data, height }) => (
+  <ResponsiveBar
+    height={height}
+    data={data}
+    barComponent={BarComponent}
+    theme={theme}
+    layout='horizontal'
+    margin={{ top: 20, right: 30, bottom: 30, left: 0 }}
+    colorBy='indexValue'
+    colors={[colorChart.orange, colorChart.greenDark, colorChart.blueLight, colorChart.coral]}
+    enableGridX
+    enableGridY={false}
+    axisLeft={null}
+    axisTop={{
+      format: formatSkills
+    }}
+    axisBottom={{
+      format: formatSkills
+    }}
+  />
 )

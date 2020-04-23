@@ -1,7 +1,6 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 
-import { ChartContainer } from '../ChartContainer'
 import { color, theme } from '../../config/chart'
 import { color as colorSite} from '../../config/siteConstants'
 import { formatSkills } from '../../util/chart'
@@ -27,19 +26,17 @@ const BarComponent = props => {
   )
 }
 
-export const VerticalBarChart = ({ title, data, height, width }) => (
-  <ChartContainer title={title} height={height} width={width}>
-    <ResponsiveBar
-      margin={{ top: 10, right: 0, bottom: 30, left: 70 }}
-      height={height}
-      data={data}
-      colors={[color.fuchsia, color.orange, color.blueLight, color.coral, color.greenDark]}
-      colorBy='indexValue'
-      theme={theme}
-      axisLeft={{
-        format: formatSkills
-      }}
-      barComponent={BarComponent}
-    />
-  </ChartContainer>
+export const VerticalBarChart = ({ data, height }) => (
+  <ResponsiveBar
+    margin={{ top: 10, right: 0, bottom: 30, left: 70 }}
+    height={height}
+    data={data}
+    colors={[color.fuchsia, color.orange, color.blueLight, color.coral, color.greenDark]}
+    colorBy='indexValue'
+    theme={theme}
+    axisLeft={{
+      format: formatSkills
+    }}
+    barComponent={BarComponent}
+  />
 )

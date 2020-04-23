@@ -1,10 +1,11 @@
 import React from 'react'
 
+import { SectionHeader } from '../../components/SectionHeader'
 import { SectionContent } from './style'
 
 export const Section = ({title, className, children}) => (
   <SectionContent className={className}>
-    <h2>{title}</h2>
+    <SectionHeader title={title} />
     {children}
   </SectionContent>
 )

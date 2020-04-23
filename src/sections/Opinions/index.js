@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoIosArrowDropleft, IoIosArrowDropright} from 'react-icons/io'
 
-import { Section } from '../Section'
+import { Section } from '../../components/Section'
 import { Opinion } from '../../components/Opinion'
 import { useArrayNavigation } from '../../hooks/useArrayNavigation'
 import { size, color } from '../../config/constants'

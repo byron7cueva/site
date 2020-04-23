@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
-import { Section } from '../Section'
+import { Section } from '../../components/Section'
 import { AboutContent } from './style'
 import data from '../../../content/about.yml'
 
