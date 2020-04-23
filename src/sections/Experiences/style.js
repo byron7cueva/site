@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color as colorSite, zIndex } from '../../config/siteConstants'
+import { color as colorSite, zIndex, padding } from '../../config/siteConstants'
 import { color } from '../../config/constants'
 
 export const ExperiencesSection = styled.section`
@@ -9,8 +9,8 @@ export const ExperiencesSection = styled.section`
     position: sticky;
     top: 0;
     background-color: rgb(${color.rgb.alternative});
-    padding: 2em 0;
-    line-height: 0.5em;
+    padding: ${padding.block} 19%;
+    text-align: right;
   }
 
   h2 {

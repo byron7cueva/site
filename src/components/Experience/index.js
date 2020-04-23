@@ -34,6 +34,9 @@ export const Experience = ({ position, organization, description, initDate, fini
       `}
       render={data => (
         <ExperienceContent>
+          <div className='experience__date'>
+            <p>{`${initDate} - ${finishDate}`}</p>
+          </div>
           <BackgroundImage
             className='experience__cover'
             fluid={getCover(data)}
@@ -42,7 +45,6 @@ export const Experience = ({ position, organization, description, initDate, fini
             <div>
               <p>{organization}</p>
             </div>
-            <p className='experience__cover__date'>{`${initDate} - ${finishDate}`}</p>
           </BackgroundImage>
           <div className='expereience__description'>
             <div dangerouslySetInnerHTML={{ __html: description }} />

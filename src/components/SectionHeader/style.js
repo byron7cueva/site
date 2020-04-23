@@ -8,6 +8,13 @@ export const Header = styled.div`
   text-align: right;
 
   h2 {
-    color: ${color.primary};
+    color: ${props => props.theme.color};
   }
 `
+
+Header.defaultProps = {
+  theme: {
+    color: color.primary,
+    backgroundColor: 'transparent'
+  }
+}

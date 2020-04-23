@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SectionHeader } from '../../components/SectionHeader'
+import { SectionHeader } from '../SectionHeader'
 import { SectionContent } from './style'
 
 export const Section = ({title, className, children}) => (
