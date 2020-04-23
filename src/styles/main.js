@@ -5,7 +5,9 @@ import { defaults } from './defaults/global'
 import { heading } from './components/heading'
 import { containers } from './components/containers'
 import { buttonStyle } from './components/button'
-import { opinionsStyle }  from './components/opinions'
+import { inputStyle } from './components/input'
+import { opinionsStyle } from './components/opinions'
+import { contactStyle } from './components/contact'
 
 export const Style = createGlobalStyle`
   ${variables}
@@ -14,6 +16,10 @@ export const Style = createGlobalStyle`
   /* Components */
   ${heading}
   ${buttonStyle}
+  ${inputStyle}
   ${containers}
+
+  /* */ 
   ${opinionsStyle}
+  ${contactStyle}
 `

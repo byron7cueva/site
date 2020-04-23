@@ -11,6 +11,7 @@ export const variables = css`
         --color-light: rgb(${color.rgb.light});
         --color-dark: rgb($color.rgb.dark);
         --color-gray: rgb(${color.rgb.gray});
+        --color-gray-dark: #cecdcc;
 
         /* Size */
         --size-text: 13px;

@@ -4,7 +4,8 @@ export const color = {
   alternative: 'var(--color-alternative)',
   light: 'var(--color-light)',
   dark: 'var(--color-dark)',
-  gray: 'var(--color-gray)'
+  gray: 'var(--color-gray)',
+  grayDark: 'var(--color-gray-dark)'
 }
 
 export const size = {

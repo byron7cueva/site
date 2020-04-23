@@ -6,6 +6,7 @@ import { About } from '../sections/About'
 import { Opinions } from '../sections/Opinions'
 import { Experiences } from '../sections/Experiences'
 import { Skills } from '../sections/Skills'
+import { Contact } from '../sections/Contact'
 
 export default () => (
   <Layout>
@@ -14,5 +15,6 @@ export default () => (
     <Opinions />
     <Experiences />
     <Skills />
+    <Contact />
   </Layout>
 )

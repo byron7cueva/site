@@ -1,6 +1,8 @@
 import styled, {css} from 'styled-components'
 
-const widthSection = 330;
+import { padding } from '../../config/siteConstants'
+
+const widthSection = 320;
 
 const styles = css`
   .sticky-section {
@@ -43,6 +45,7 @@ export const StickyContainer = styled.section`
 
   h3 {
     text-align: center;
+    padding: 0 ${padding.content};
   }
   ${styles}
 `
