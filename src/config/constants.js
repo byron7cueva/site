@@ -10,3 +10,9 @@ export const color = {
 export const size = {
   icon: 20
 }
+
+export const devices = {
+  phablet: '(min-width: 480px)',
+  tablet: '(min-width: 768px)',
+  laptop: '(min-width: 1024px)'
+}
