@@ -31,7 +31,7 @@ export const VerticalBarChart = ({ data, height }) => (
     margin={{ top: 10, right: 0, bottom: 30, left: 70 }}
     height={height}
     data={data}
-    colors={[color.fuchsia, color.orange, color.blueLight, color.coral, color.greenDark]}
+    colors={[color.fuchsia, color.orange, color.blue, color.coral, color.greenDark]}
     colorBy='indexValue'
     theme={theme}
     axisLeft={{

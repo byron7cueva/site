@@ -1,8 +1,10 @@
 import styled, {css} from 'styled-components'
 
-import { padding } from '../../config/siteConstants'
+import { padding, color } from '../../config/siteConstants'
+import { color as colors } from '../../config/constants'
+import pattern from '../../assets/img/geometryPattern.png'
 
-const widthSection = 320;
+const widthSection = 340;
 
 const styles = css`
   .sticky-section {
@@ -14,9 +16,12 @@ const styles = css`
 
     &__background {
       position: absolute;
-      width: ${widthSection + 30}vh;
+      width: calc(${widthSection}vh + 100vw);
+      left: -${widthSection}vh;
       height: 100%;
       opacity: 1;
+      background-image: url('${pattern}');
+      background-position: 0 0;
     }
 
     &__overflow-mask {
@@ -32,7 +37,7 @@ const styles = css`
     &__items {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-end;
       height: 100%;
       width: ${widthSection}vh;
     }
@@ -41,11 +46,13 @@ const styles = css`
 
 export const StickyContainer = styled.section`
   position: relative;
-  height: ${widthSection + 30}vh;
+  height: calc(${widthSection}vh + 100vw);
+  background-color: rgba(${colors.rgb.gray}, 0.45);
 
   h3 {
     text-align: center;
     padding: 0 ${padding.content};
+    color: ${color.alternative};
   }
   ${styles}
 `

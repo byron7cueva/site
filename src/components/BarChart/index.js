@@ -32,7 +32,7 @@ export const BarChart = ({ data, height }) => (
     layout='horizontal'
     margin={{ top: 20, right: 30, bottom: 30, left: 0 }}
     colorBy='indexValue'
-    colors={[colorChart.orange, colorChart.greenDark, colorChart.blueLight, colorChart.coral]}
+    colors={[colorChart.orange, colorChart.greenDark, colorChart.blue, colorChart.coral]}
     enableGridX
     enableGridY={false}
     axisLeft={null}

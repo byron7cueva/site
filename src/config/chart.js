@@ -1,14 +1,14 @@
 import { color as colorSite, size, font } from './siteConstants'
 
 export const color = {
-  blueLight: '#1ea0f2',
+  blue: '#2980b9',
   greenLight: '#85eba2',
-  green: '#41c7c7',
+  green: '#27ae60',
   greenDark: '#3abbb3',
   yellow: '#fbf34c',
   fuchsia: '#f649a7',
   coral: '#fe6a6a',
-  orange: '#ef8d33'
+  orange: '#e67e22'
 }
 
 export const theme = {

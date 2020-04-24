@@ -16,8 +16,8 @@ export const StickySection = ({ title, children }) => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if(window.scrollY > stickySection.current.offsetTop) {
-        let xPos = (window.scrollY - stickySection.current.offsetTop) * -1;
-        setTraslateX(xPos, scrollableSection.current);
+        let xPos = window.scrollY - stickySection.current.offsetTop;
+        setTraslateX(xPos * -1, scrollableSection.current);
         setTraslateX(xPos, stickyBackground.current);
       }
     })

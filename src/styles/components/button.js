@@ -25,8 +25,7 @@ export const buttonStyle = css`
     transition-timing-function: ease-out;
     color: ${color.light};
     border-radius: 24px;
-    background: linear-gradient(278deg, ${color.alternative}, ${color.primary});
-    opacity: 0.8;
+    background-color: ${color.primary};
     &:hover {
       background: ${color.primary};
     }

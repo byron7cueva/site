@@ -3,6 +3,7 @@ import React from 'react'
 import { Style } from '../../styles/main'
 import { LogoSection } from '../../components/LogoSection'
 import { MenuButton } from '../../components/MenuButton'
+import { Footer } from '../../components/Footer'
 import { Helmet } from 'react-helmet'
 import { color } from '../../config/constants'
 
@@ -19,5 +20,6 @@ export const Layout = ({ children }) => (
     <main>
       {children}
     </main>
+    <Footer />
   </>
 )

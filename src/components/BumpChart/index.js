@@ -3,6 +3,7 @@ import { ResponsiveBump } from '@nivo/bump'
 
 import { formatSkills } from '../../util/chart'
 import { color as colorSite } from '../../config/siteConstants'
+import { color as colors } from '../../config/constants'
 import { color, theme } from '../../config/chart'
 
 const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive }) => {
@@ -10,7 +11,7 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
     <g transform={`translate(${x}, ${y})`} style={{ pointerEvents: 'none' }}>
       <circle
         r={size}
-        fill={colorSite.light}
+        fill={`rgb(${colors.rgb.gray})`}
         stroke={borderColor}
         strokeWidth={borderWidth}
       />
@@ -69,7 +70,7 @@ export const BumpChart = ({ data, height }) => (
     activePointBorderWidth={4}
     inactivePointSize={0}
     inactivePointBorderWidth={2}
-    colors={[color.blueLight, color.greenLight, color.orange, color.coral]}
+    colors={[color.blue, color.green, color.orange, color.coral]}
     startLabel={d => (d.id)}
   />
 )
