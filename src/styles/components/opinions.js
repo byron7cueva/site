@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 
+import { devices } from '../../config/constants'
 import { color, margin } from '../../config/siteConstants'
 
 export const opinionsStyle = css`
@@ -17,6 +18,12 @@ export const opinionsStyle = css`
       align-items: center;
       justify-content: center;
       padding: 0.5em 1em;
+    }
+  }
+
+  @media ${devices.phablet} {
+    .opinions {
+      padding: 0 10%;
     }
   }
 `
