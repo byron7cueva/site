@@ -51,7 +51,7 @@ export const StickyContainer = styled.section`
 
   h3 {
     text-align: center;
-    padding: 0 ${padding.content};
+    padding: 0 10%;
     color: ${color.alternative};
   }
   ${styles}
