@@ -35,7 +35,7 @@ export const variables = css`
         /* z-index*/
         --z-index-section-sticky: 1;
         --z-index-header-sticky: 2;
-        --z-index-logo: 3;
-        --z-index-menu: 4;
+        --z-index-menu: 3;
+        --z-index-logo: 4;
     } 
 `

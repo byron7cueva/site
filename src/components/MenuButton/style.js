@@ -12,5 +12,5 @@ export const ButtonContainer = styled.button`
   height: 3.5em;
   border-radius: 50%;
   backdrop-filter: saturate(10%) blur(5px);
-  background-color: rgba(${color.rgb.alternative} , 0.9);
+  background-color: rgba(${color.rgb.alternative} , 0.65);
 `

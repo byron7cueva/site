@@ -2,7 +2,6 @@ import React from 'react'
 import { ResponsiveBump } from '@nivo/bump'
 
 import { formatSkills } from '../../util/chart'
-import { color as colorSite } from '../../config/siteConstants'
 import { color as colors } from '../../config/constants'
 import { color, theme } from '../../config/chart'
 

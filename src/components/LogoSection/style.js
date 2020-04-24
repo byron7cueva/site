@@ -24,7 +24,7 @@ export const Path = styled.div.attrs(props => ({
   height: ${props => props.height};
   mask-image: url(${pathLogo});
   mask-size: cover;
-  background-color: rgba(${color.rgb.alternative}, 0.85);
+  background-color: rgba(${color.rgb.alternative}, 0.65);
   ${saturationMask}
 `
 

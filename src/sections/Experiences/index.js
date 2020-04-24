@@ -7,7 +7,7 @@ import data from '../../../content/experience.yml'
 export const Experiences = () => {
 
   return (
-    <ExperiencesSection>
+    <ExperiencesSection id='experiences'>
       <div className='experience-section__header'>
         <h2>{data.title}</h2>
       </div>

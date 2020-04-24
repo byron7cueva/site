@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components'
 
-import { padding, color } from '../../config/siteConstants'
+import { color } from '../../config/siteConstants'
 import { color as colors } from '../../config/constants'
 import pattern from '../../assets/img/geometryPattern.png'
 

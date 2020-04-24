@@ -32,7 +32,7 @@ export const About = () => {
     `
   )
   return (
-    <Section title={data.title}>
+    <Section title={data.title} id='about'>
       <AboutContent>
         <p>{data.content}</p>
         <BackgroundImage

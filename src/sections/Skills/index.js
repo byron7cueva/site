@@ -9,7 +9,7 @@ import data from '../../../content/skills'
 
 export const Skills = () => {
   return (
-    <StickySection title={data.title} >
+    <StickySection title={data.title} id='skills'>
       <StickyItem title={data.content.languages.title} height={180} width={400}>
         <BarChart data={data.content.languages.data} height={180} />
       </StickyItem>

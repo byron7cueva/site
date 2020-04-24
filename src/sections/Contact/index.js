@@ -3,7 +3,7 @@ import React from 'react'
 import { Section } from '../../components/Section'
 
 export const Contact = () => (
-  <Section title='Escribeme' className='contact'>
+  <Section title='Escribeme' className='contact' id='contact'>
     <p className='contact__mail'><i className='icon-mail' /> byron7cueva@gmail.com</p>
     <form>
       <input type='text' placeholder='Nombres' />

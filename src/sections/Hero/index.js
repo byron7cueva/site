@@ -42,6 +42,7 @@ export const Hero = () => {
     <BackgroundImage
       Tag='section'
       fluid={background}
+      id='home'
     >
       <HeroContent
         className='fill-viewport'

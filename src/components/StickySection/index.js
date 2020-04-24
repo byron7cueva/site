@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import { SectionHeader } from '../SectionHeader'
 import { StickyContainer } from './style'
 
-export const StickySection = ({ title, children }) => {
+export const StickySection = ({ title, children, id }) => {
   const [titleItem, setTitleItem] = useState(null)
   const stickySection = useRef(null)
   const scrollableSection = useRef(null)
@@ -39,7 +39,7 @@ export const StickySection = ({ title, children }) => {
   }, [stickySection])
 
   return (
-    <StickyContainer ref={stickySection}>
+    <StickyContainer ref={stickySection} id={id}>
       <div className='sticky-section'>
         <SectionHeader title={title} />
         <h3>{titleItem}</h3>

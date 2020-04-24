@@ -11,7 +11,7 @@ export const Opinions = () => {
   const {item, next, prev} = useArrayNavigation(data.content)
 
   return (
-    <Section title={data.title} className='opinions'>
+    <Section title={data.title} className='opinions' id='opinions'>
       <Opinion {...item.item} />
       <div className='opinions__navigation'>
         <button onClick={prev}>
