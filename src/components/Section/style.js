@@ -15,4 +15,8 @@ export const SectionContent = styled.section`
   @media ${devices.tablet} {
     padding: 0 20% 2em;
   }
+
+  @media ${devices.laptop} {
+    padding: 0 25% 2em;
+  }
 `
