@@ -46,7 +46,7 @@ const styles = css`
 `
 
 export const StickyContainer = styled.section`
-  --width-section: 500vw;
+  --width-section: 520vw;
 
   position: relative;
   height: calc(${widthSection} + 50vw);
@@ -60,11 +60,14 @@ export const StickyContainer = styled.section`
   ${styles}
 
   @media ${devices.phablet} {
-    --width-section: 400vw;
+    --width-section: 440vw;
   }
 
   @media ${devices.tablet} {
-    --width-section: 220vw;
+    --width-section: 310vw;
+    &, .sticky-section__background {
+      height: calc(${widthSection} + 15vw);
+    }
   }
 
   @media ${devices.laptop} {

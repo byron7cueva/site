@@ -5,10 +5,11 @@ import { devices } from '../../config/constants'
 export const StickyContent = styled.article.attrs(props => ({
   width: props.width || 400
 }))`
-  width: ${props => props.width}px;
-  margin: 0 3.5em;
+  width: ${props => props.width}vw;
+  margin: 0 18vw;
   display: flex;
   align-items: center;
+  height: 100%;
 
   .sticky-item__content {
     width: 100%;
@@ -19,5 +20,9 @@ export const StickyContent = styled.article.attrs(props => ({
     .sticky-item__content {
       height: 50vh;
     }
+  }
+
+  @media ${devices.tablet} {
+    margin: 0 16vw;
   }
 `
