@@ -52,7 +52,7 @@ export const Hero = () => {
         </div>
       </div>
       <Particles params={config} className='hero__particles' />
-      <a href='#'>
+      <a href='#about'>
         <IoIosArrowDropdown size={size.icon} color={`rgb(${color.rgb.light})`} />
       </a>
     </BackgroundImage>

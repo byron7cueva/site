@@ -42,7 +42,7 @@ export const variables = css`
     @media ${devices.phablet} {
         :root {
             /* Size */
-            --size-text: 14px;
+            --size-text: 16px;
 
             /* Padding */
             --padding-content: 0.7em;

@@ -1,5 +1,7 @@
 import { css } from 'styled-components'
 
+import { devices } from '../../config/constants'
+
 export const heroStyle = css`
   .hero {
     height: 90vh;
@@ -27,6 +29,14 @@ export const heroStyle = css`
       position: absolute;
       bottom: 1em;
       left: 50%;
+    }
+  }
+
+  @media ${devices.tablet} {
+    .hero {
+      &::before {
+        background-position-x: 70% !important;
+      }
     }
   }
 `
