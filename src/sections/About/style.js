@@ -29,4 +29,10 @@ export const AboutContent = styled.div`
       width: 50%;
     }
   }
+
+  @media ${devices.tablet} {
+    p {
+      width: 60%;
+    }
+  }
 `
