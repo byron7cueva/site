@@ -1,12 +1,13 @@
 import styled, {css} from 'styled-components'
 
 import { color } from '../../config/siteConstants'
-import { color as colors } from '../../config/constants'
+import { color as colors, devices } from '../../config/constants'
 import pattern from '../../assets/img/geometryPattern.png'
 
-const widthSection = 340;
+const widthSection = 'var(--width-section)';
 
 const styles = css`
+
   .sticky-section {
     position: sticky;
     top: 0;
@@ -16,9 +17,9 @@ const styles = css`
 
     &__background {
       position: absolute;
-      width: calc(${widthSection}vh + 100vw);
-      left: -${widthSection}vh;
-      height: 100%;
+      width: calc(${widthSection} + 50vw);
+      left: calc(${widthSection} * -1);
+      height: calc(100vh - 8em);
       opacity: 1;
       background-image: url('${pattern}');
       background-position: 0 0;
@@ -30,23 +31,25 @@ const styles = css`
       display: flex;
       align-items: center;
       overflow: hidden;
-      height: 100%;
+      height: calc(100vh - 8em);
       width: 100%;
     }
 
     &__items {
       display: flex;
       justify-content: flex-start;
-      align-items: flex-end;
+      align-items: center;
       height: 100%;
-      width: ${widthSection}vh;
+      width: ${widthSection};
     }
   }
 `
 
 export const StickyContainer = styled.section`
+  --width-section: 500vw;
+
   position: relative;
-  height: calc(${widthSection}vh + 100vw);
+  height: calc(${widthSection} + 50vw);
   background-color: rgba(${colors.rgb.gray}, 0.45);
 
   h3 {
@@ -55,4 +58,16 @@ export const StickyContainer = styled.section`
     color: ${color.alternative};
   }
   ${styles}
+
+  @media ${devices.phablet} {
+    --width-section: 400vw;
+  }
+
+  @media ${devices.tablet} {
+    --width-section: 220vw;
+  }
+
+  @media ${devices.laptop} {
+    --width-section: 150vw;
+  }
 `

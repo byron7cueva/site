@@ -23,9 +23,8 @@ const BarComponent = props => (
   </g>
 )
 
-export const BarChart = ({ data, height }) => (
+export const BarChart = ({ data }) => (
   <ResponsiveBar
-    height={height}
     data={data}
     barComponent={BarComponent}
     theme={theme}

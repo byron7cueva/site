@@ -30,9 +30,8 @@ const format = d => {
   }
 }
 
-export const BumpChart = ({ data, height }) => (
+export const BumpChart = ({ data }) => (
   <ResponsiveBump
-    height={height}
     data={data}
     pointComponent={CustomPoint}
     theme={theme}
