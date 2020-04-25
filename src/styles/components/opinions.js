@@ -20,10 +20,4 @@ export const opinionsStyle = css`
       padding: 0.5em 1em;
     }
   }
-
-  @media ${devices.phablet} {
-    .opinions {
-      padding: 0 10%;
-    }
-  }
 `

@@ -22,17 +22,11 @@ export const AboutContent = styled.div`
 
     p {
       margin-top: ${margin.block};
-      width: 80%;
+      width: 100%;
     }
 
     .about-content__photo {
       width: 50%;
-    }
-  }
-
-  @media ${devices.tablet} {
-    p {
-      width: 60%;
     }
   }
 `
