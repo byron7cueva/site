@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { IoIosArrowDropdown } from 'react-icons/io'
 
-import { HeroContent, Anchor } from './style'
 import nameSvg from '../../../static/img/all/name.svg'
 import { size, color } from '../../config/constants'
 
@@ -43,20 +42,19 @@ export const Hero = () => {
       Tag='section'
       fluid={background}
       id='home'
+      className='hero'
     >
-      <HeroContent
-        className='fill-viewport'
-      >
+      <div className='hero__content'>
         <div>
           <h6>SOY</h6>
           <img src={nameSvg} alt='Byron Cueva' />
           <h5>Full Stack Developer</h5>
         </div>
-      </HeroContent>
-      <Particles params={config} className='fill-viewport' />
-      <Anchor href='#'>
+      </div>
+      <Particles params={config} className='hero__particles' />
+      <a href='#'>
         <IoIosArrowDropdown size={size.icon} color={`rgb(${color.rgb.light})`} />
-      </Anchor>
+      </a>
     </BackgroundImage>
   )
 }

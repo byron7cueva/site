@@ -6,6 +6,7 @@ import { heading } from './components/heading'
 import { containers } from './components/containers'
 import { buttonStyle } from './components/button'
 import { inputStyle } from './components/input'
+import { heroStyle } from './components/hero'
 import { opinionsStyle } from './components/opinions'
 import { contactStyle } from './components/contact'
 
@@ -20,6 +21,7 @@ export const Style = createGlobalStyle`
   ${containers}
 
   /* */ 
+  ${heroStyle}
   ${opinionsStyle}
   ${contactStyle}
 `
