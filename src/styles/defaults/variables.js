@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { color } from '../../config/constants'
+import { color, devices } from '../../config/constants'
 
 export const variables = css`
     :root {
@@ -38,4 +38,15 @@ export const variables = css`
         --z-index-menu: 3;
         --z-index-logo: 4;
     } 
+
+    @media ${devices.phablet} {
+        :root {
+            /* Size */
+            --size-text: 14px;
+
+            /* Padding */
+            --padding-content: 0.7em;
+            --padding-block: 1.5em;
+        }
+    }
 `

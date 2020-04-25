@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { color as colorSite, zIndex, padding } from '../../config/siteConstants'
-import { color } from '../../config/constants'
+import { color, devices } from '../../config/constants'
 
 export const ExperiencesSection = styled.section`
   .experience-section__header {

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { devices } from '../../config/constants'
 import { color, padding, zIndex } from '../../config/siteConstants'
 
 export const ExperienceContent = styled.article`
@@ -64,6 +65,12 @@ export const ExperienceContent = styled.article`
     div {
       padding: inherit;
       background-color: rgba(117,123,157,0.16);
+    }
+  }
+
+  @media ${devices.phablet} {
+    .experience__date {
+      top: 5.5em;
     }
   }
 `
