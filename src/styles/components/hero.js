@@ -39,4 +39,12 @@ export const heroStyle = css`
       }
     }
   }
+
+  @media ${devices.laptop} {
+    .hero {
+      &::before {
+        background-position-x: 100% !important;
+      }
+    }
+  }
 `
