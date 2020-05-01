@@ -11,6 +11,8 @@ export const SectionHeader = ({ title, className }) => (
 export const Section = ({title, className, children, id}) => (
   <SectionContent className={className} id={id}>
     <SectionHeader title={title} />
-    {children}
+    <div className='section__content'>
+      {children}
+    </div>
   </SectionContent>
 )

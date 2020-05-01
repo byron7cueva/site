@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import { devices } from '../../config/constants'
+
 const styleClass = css`
   .opinion__message {
     min-height: 13em;
@@ -33,4 +35,9 @@ const styleClass = css`
 export const OpinionContainer = styled.article`
   text-align: center;
   ${styleClass}
+
+  @media ${devices.laptop} {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
 `
