@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 
 import { useStickyState } from './context'
+import { checkTopStuck } from '../../util/utils'
 
 export function useObserveTopSentinel (topSentinelRef, { onChange }) {
   const { stickyRefs } = useStickyState()
@@ -10,16 +11,7 @@ export function useObserveTopSentinel (topSentinelRef, { onChange }) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const target = stickyRefs.get(entry.target)
-        const { boundingClientRect, rootBounds } = entry
-  
-        if (boundingClientRect.bottom < rootBounds.top) {
-          onChange(true, target)
-        }
-  
-        if (boundingClientRect.bottom >= rootBounds.top &&
-          boundingClientRect.bottom < rootBounds.bottom) {
-            onChange(false, target)
-          }
+        checkTopStuck(entry, target, onChange)
       })
     }, {
       threshold: [0]
@@ -49,8 +41,7 @@ export function useObserveBottomSentinels (bottomSentinelRef, { onChange }) {
 
         if (boundingClientRect.bottom > rootBounds.top &&
           intersectionRatio === 1 && 
-          targetRect.bottom < boundingClientRect.bottom && 
-          targetRect.top > boundingClientRect.top) {
+          targetRect.bottom > boundingClientRect.top) {
           onChange(true, target)
         }
 

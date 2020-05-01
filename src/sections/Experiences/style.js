@@ -3,18 +3,26 @@ import styled from 'styled-components'
 import { color, zIndex} from '../../config/siteConstants'
 import { color as colorConfig } from '../../config/constants'
 import { saturationMask } from '../../styles/mixins/background'
+import { SentinelStickyStyle } from '../../styles/mixins/helpers'
 
 export const ExperiencesSection = styled.section`
+  position: relative;
+  background-color: ${color.alternative};
+
+  .experiences__sentinel-top {
+    ${SentinelStickyStyle}
+    height: 2em;
+    top: -1em;
+  }
+
   .experience-section__header {
     z-index: ${zIndex.headerSticky};
     position: sticky;
     top: 0;
-    ${saturationMask}
   }
 
   .sticky {
     text-align: right;
-    padding: 0 1em;
 
     &__background {
       position: absolute;
@@ -30,6 +38,7 @@ export const ExperiencesSection = styled.section`
       position: relative;
       display: inline-flex;
       color: ${color.light};
+      padding: 0 1em;
       &::before, &::after {
         content: '';
         width: 0.5em;
