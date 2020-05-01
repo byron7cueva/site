@@ -61,16 +61,51 @@ export const StickyContainer = styled.section`
 
   @media ${devices.phablet} {
     --width-section: 440vw;
+    &, .sticky-section__background {
+      height: calc(${widthSection} + 100vw);
+    }
   }
 
   @media ${devices.tablet} {
     --width-section: 310vw;
     &, .sticky-section__background {
-      height: calc(${widthSection} + 15vw);
+      height: calc(${widthSection} + 30vw);
     }
   }
 
   @media ${devices.laptop} {
-    --width-section: 150vw;
+    --width-section: 250vw;
+    &, .sticky-section__background {
+      height: calc(${widthSection} + 15vw);
+    }
+  }
+`
+
+export const StickyContent = styled.article.attrs(props => ({
+  width: props.width || 400
+}))`
+  width: ${props => props.width}px;
+  margin-left: 30vw;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .sticky-item__content {
+    width: 100%;
+    height: 60vh;
+  }
+
+  @media ${devices.phablet} {
+    .sticky-item__content {
+      height: 50%;
+    }
+  }
+
+  @media ${devices.tablet} {
+    margin-left: 16vw;
+  }
+
+  @media ${devices.laptop} {
+    margin-left: 25vw;
   }
 `

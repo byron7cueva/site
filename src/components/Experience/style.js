@@ -1,42 +1,13 @@
 import styled from 'styled-components'
 
 import { devices } from '../../config/constants'
-import { color, padding, zIndex } from '../../config/siteConstants'
+import { color, padding } from '../../config/siteConstants'
 
 export const ExperienceContent = styled.article`
   background-color: ${color.alternative};
   color: ${color.light};
   border-bottom: 1px solid ${color.secondary};
   position: relative;
-
-  .experience__date {
-    z-index: ${zIndex.sectionSticky};
-    position: sticky;
-    top: 4.5em;
-    background-color: ${color.alternative};
-    text-align: right;
-    padding: 0 1em;
-
-    p {
-      display: inline-flex;
-      &::before, &::after {
-      content: '';
-      width: 0.5em;
-      height: 0.5em;
-      background-color: ${color.gray};
-      border-radius: 50%;
-      margin-top: 0.5em;
-    }
-
-    &::before {
-      margin-right: 1em;
-    }
-
-    &::after {
-      margin-left: 1em;
-    }
-    }
-  }
 
   .experience__cover {
     position: relative;

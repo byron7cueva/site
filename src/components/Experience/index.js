@@ -34,9 +34,7 @@ export const Experience = ({ position, organization, description, initDate, fini
       `}
       render={data => (
         <ExperienceContent>
-          <div className='experience__date'>
-            <p>{`${initDate} - ${finishDate}`}</p>
-          </div>
+          
           <BackgroundImage
             className='experience__cover'
             fluid={getCover(data)}

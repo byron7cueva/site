@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react'
 
-import { SectionHeader } from '../SectionHeader'
-import { StickyContainer } from './style'
+import { SectionHeader } from '../Section'
+import { StickyContainer, StickyContent } from './style'
 
-export const StickySection = ({ title, children, id }) => {
+export const HorizontalScrollSection = ({ title, children, id }) => {
   const [titleItem, setTitleItem] = useState(null)
   const stickySection = useRef(null)
   const scrollableSection = useRef(null)
@@ -30,7 +30,7 @@ export const StickySection = ({ title, children, id }) => {
         setTitleItem(entries[0].target.dataset.title)
       }
     }, {
-      threshold: [0.5, 0.9]
+      threshold: [0.25]
     })
 
     children.forEach(element => {
@@ -53,3 +53,11 @@ export const StickySection = ({ title, children, id }) => {
     </StickyContainer>
   )
 }
+
+export const HorizontalScrollItem = ({ children, width, title }) => (
+  <StickyContent width={width} data-title={title}>
+    <div className='sticky-item__content'>
+      {children}
+    </div>
+  </StickyContent>
+)

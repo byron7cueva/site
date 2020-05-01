@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { color, devices } from '../../config/constants'
-import { padding } from '../../config/siteConstants'
+import { color as colorSite, padding } from '../../config/siteConstants'
 
 export const SectionContent = styled.section`
   overflow: hidden;
@@ -20,3 +20,21 @@ export const SectionContent = styled.section`
     padding: 0 25% 2em;
   }
 `
+
+export const Header = styled.div`
+  padding: ${padding.block} 19%;
+  width: 100%;
+  text-align: right;
+  background-color: ${props => props.theme.backgroundColor};
+
+  h2 {
+    color: ${props => props.theme.color};
+  }
+`
+
+Header.defaultProps = {
+  theme: {
+    color: colorSite.primary,
+    backgroundColor: 'transparent'
+  }
+}
