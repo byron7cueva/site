@@ -1,7 +1,6 @@
 import { css } from 'styled-components'
 
 import { color, margin } from '../../config/siteConstants'
-import { devices } from '../../config/constants'
 
 export const opinionsStyle = css`
   .opinions {

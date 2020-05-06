@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color, devices } from '../../config/constants'
+import { devices } from '../../config/constants'
 import { color as colorSite, padding } from '../../config/siteConstants'
 
 export const Header = styled.div`
@@ -24,7 +24,6 @@ Header.defaultProps = {
 export const SectionContent = styled.section`
   overflow: hidden;
   padding: 2em ${padding.block};
-  background-color: rgba(${color.rgb.gray}, 0.45);
 
   @media ${devices.phablet} {
     .section__content {

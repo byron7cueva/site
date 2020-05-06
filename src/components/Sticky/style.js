@@ -34,3 +34,19 @@ export const SentinelStickyBottom = styled.div`
     height: 7.5em;
   }
 `
+
+export const StickySectionContainer = styled.div`
+  @media ${devices.laptop} {
+    padding: 0 10%;
+    display: flex;
+
+    .sticky-section__items {
+      width: 70%;
+    }
+
+    .sticky-section__nav {
+      width: 30%;
+      height: inherit;
+    }
+  }
+`

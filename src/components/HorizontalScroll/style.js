@@ -50,7 +50,6 @@ export const StickyContainer = styled.section`
 
   position: relative;
   height: calc(${widthSection} + 50vw);
-  background-color: rgba(${colors.rgb.gray}, 0.45);
 
   h3 {
     text-align: center;
@@ -106,6 +105,6 @@ export const StickyContent = styled.article.attrs(props => ({
   }
 
   @media ${devices.laptop} {
-    margin-left: 25vw;
+    margin-left: 45vw;
   }
 `

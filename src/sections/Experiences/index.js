@@ -1,21 +1,18 @@
 import React, { useRef } from 'react'
+import Media from 'react-media'
 
 import { Experience } from '../../components/Experience'
 import { ExperiencesSection } from './style'
 import { SectionHeader } from '../../components/Section'
-import { color as colorSite} from '../../config/siteConstants'
-import { ThemeProvider } from 'styled-components'
+import { TimeLine } from '../../components/TimeLine'
 import { StickySection, StickyBoundary, Sticky } from '../../components/Sticky'
 import { useObserveTopSentinel } from '../../hooks/useObserveTopSentinel'
+import { desktopFirst, devices } from '../../config/constants'
 import data from '../../../content/experience.yml'
 
 export const Experiences = () => {
   const topSentinelRef = useRef(null)
   const stickyRef = useRef(null)
-
-  const themeHeader = {
-    color: colorSite.secondary
-  }
 
   const onChangeHandler = (stuck, target) => {
     if (stuck) {
@@ -35,20 +32,15 @@ export const Experiences = () => {
       >
         sentinel top
       </div>
-      <div className='experience-section__header sticky' ref={stickyRef}>
+      <div className='experiences__header sticky' ref={stickyRef}>
         <div className='sticky__background' />
-        <ThemeProvider theme={themeHeader}>
-          <SectionHeader title={data.title} />
-        </ThemeProvider>
+        <SectionHeader title={data.title} className='experiences__header__title'/>
       </div>
       <StickySection>
       {
         data.content.map(item => (
-          <StickyBoundary key={item.key} onChange={onChangeHandler}>
-            <Sticky className='sticky'>
-              <div className='sticky__background' />
-              <p className='sticky__title'>{`${item.initDate} - ${item.finishDate}`}</p>
-            </Sticky>
+          <StickyBoundary key={item.key}>
+            <Sticky title={`${item.initDate} - ${item.finishDate}`} />
             <Experience {...item} />
           </StickyBoundary>
         ))

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { color, zIndex} from '../../config/siteConstants'
-import { color as colorConfig } from '../../config/constants'
+import { color as colorConfig, devices } from '../../config/constants'
 import { saturationMask } from '../../styles/mixins/background'
 import { SentinelStickyStyle } from '../../styles/mixins/helpers'
 
@@ -15,10 +15,14 @@ export const ExperiencesSection = styled.section`
     top: -1em;
   }
 
-  .experience-section__header {
+  .experiences__header {
     z-index: ${zIndex.headerSticky};
     position: sticky;
     top: 0;
+
+    &__title h2 {
+      color: ${color.secondary};
+    }
   }
 
   .sticky {
@@ -60,6 +64,22 @@ export const ExperiencesSection = styled.section`
       .sticky__background {
         background-color: rgba(${colorConfig.rgb.alternative}, 0.65);
         ${saturationMask}
+      }
+    }
+  }
+
+  @media ${devices.laptop} {
+    background-color: transparent;
+
+    .experiences__header {
+      &__title h2 {
+        color: ${color.primary};
+      }
+    }
+    
+    .sticky {
+      &__background {
+        background-color: transparent;
       }
     }
   }

@@ -1,11 +1,15 @@
 import React, { createContext, useContext, useReducer } from 'react'
 
 const initialState = {
-  stickyRefs: new Map()
+  stickyRefs: new Map(),
+  currentTitle: null
 }
 
+const noop = () => {}
+
 const initialDispatch = {
-  addStickyRef: () => {}
+  addStickyRef: noop,
+  setCurrentTitle: noop
 }
 
 const initialSectionValues = {
@@ -18,7 +22,8 @@ const StickyDispatchContext = createContext(initialDispatch)
 const StickySectionContext = createContext(initialSectionValues)
 
 const ActionType = {
-  addStickyRef: 'add sticky ref'
+  addStickyRef: 'add sticky ref',
+  setCurrentTitle: 'set current title'
 }
 
 function reducer (state, action) {
@@ -30,6 +35,11 @@ function reducer (state, action) {
       state.stickyRefs.set(bottomSentinelRef.current, stickyRef)
       return Object.assign(state, {
         stickyRefs: state.stickyRefs
+      })
+
+    case ActionType.setCurrentTitle:
+      return Object.assign(state, {
+        currentTitle: payload.currentTitle
       })
     default:
       return state
@@ -52,8 +62,12 @@ function StickyProvider ({ children }) {
   const addStickyRef = ( topSentinelRef, bottomSentinelRef, stickyRef ) =>
     dispatch({type: ActionType.addStickyRef, payload: { topSentinelRef, bottomSentinelRef, stickyRef }})
 
+  const setCurrentTitle = currentTitle =>
+    dispatch({type: ActionType.setCurrentTitle, payload: {currentTitle}})
+
   const actions = {
-    addStickyRef
+    addStickyRef,
+    setCurrentTitle
   }
 
   return (

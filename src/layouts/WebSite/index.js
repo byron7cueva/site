@@ -1,13 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { isMobile } from 'react-device-detect'
+import Media from 'react-media'
 
 import { Style } from '../../styles/main'
 import { LogoSection } from '../../components/LogoSection'
 import { MenuButton } from '../../components/MenuButton'
 import { Menu } from '../../components/Menu' 
 import { Footer } from '../../components/Footer'
-import { color } from '../../config/constants'
+import { color, desktopFirst } from '../../config/constants'
 
 export const Layout = ({ children, showMenu, onClickMenuButton, onClickItemMenu }) => (
   <>
@@ -18,7 +18,9 @@ export const Layout = ({ children, showMenu, onClickMenuButton, onClickItemMenu 
     </Helmet>
     <Style />
     <LogoSection />
-    { isMobile && <MenuButton onClick={onClickMenuButton}/> }
+    <Media query={desktopFirst.tablet} render={() => (
+      <MenuButton onClick={onClickMenuButton}/>
+    )}/>
     <Menu isShow={showMenu} onClickItem={onClickItemMenu} />
     <main>
       {children}

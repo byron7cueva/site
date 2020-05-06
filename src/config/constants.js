@@ -16,3 +16,8 @@ export const devices = {
   tablet: '(min-width: 768px)',
   laptop: '(min-width: 1024px)'
 }
+
+export const desktopFirst = {
+  tablet: '(max-width: 767px)',
+  laptop: '(max-width: 1023px)'
+}

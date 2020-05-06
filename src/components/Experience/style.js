@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { devices } from '../../config/constants'
 import { color, padding } from '../../config/siteConstants'
 
 export const ExperienceContent = styled.div`
@@ -36,5 +37,11 @@ export const ExperienceContent = styled.div`
       padding: inherit;
       background-color: rgba(117,123,157,0.16);
     }
+  }
+
+  @media ${devices.laptop} {
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 2em 0;
   }
 `

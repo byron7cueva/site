@@ -1,10 +1,18 @@
 import React, { useRef, useContext } from 'react'
+import Media from 'react-media'
 
-import { StickyContainer, Boundary, SentinelStickyTop, SentinelStickyBottom } from './style'
-import { StickySectionContext, StickyProvider, useStickyActions } from './context'
+import {
+  StickyContainer,
+  Boundary, SentinelStickyTop,
+  SentinelStickyBottom,
+  StickySectionContainer
+} from './style'
+import { StickySectionContext, StickyProvider, useStickyActions, StickyStateContext } from './context'
 import { useObserveTopSentinel, useObserveBottomSentinels } from './hooks'
+import { TimeLine } from '../TimeLine'
+import { devices } from '../../config/constants'
 
-export const Sticky = ({ children, className }) => {
+export const Sticky = ({ title }) => {
   const { topSentinelRef, bottomSentinelRef } = useContext(StickySectionContext)
 
   const dispatch = useStickyActions()
@@ -16,20 +24,31 @@ export const Sticky = ({ children, className }) => {
   return (
     <StickyContainer
       ref={addStickyRef}
-      className={className}
+      className='sticky'
     >
-      {children}
+      <div className='sticky__background' />
+      <p className='sticky__title'>{title}</p>
     </StickyContainer>
   )
 }
 
 
-export const StickyBoundary = ({ children, onChange }) => {
+export const StickyBoundary = ({ children }) => {
   const topSentinelRef = useRef(null)
   const bottomSentinelRef = useRef(null)
+  const dispatch = useStickyActions()
 
-  useObserveTopSentinel(topSentinelRef, { onChange })
-  useObserveBottomSentinels(bottomSentinelRef, { onChange })
+  const onChangeHandler = (stuck, target) => {
+    if (stuck) {
+      target.classList.add('sticky--stuck')
+      dispatch.setCurrentTitle(target.querySelector('p').textContent)
+    } else {
+      target.classList.remove('sticky--stuck')
+    }
+  }
+
+  useObserveTopSentinel(topSentinelRef, { onChange: onChangeHandler })
+  useObserveBottomSentinels(bottomSentinelRef, { onChange: onChangeHandler })
 
   const value = { topSentinelRef, bottomSentinelRef }
 
@@ -52,6 +71,15 @@ export const StickyBoundary = ({ children, onChange }) => {
 
 export const StickySection = ({ children }) => (
   <StickyProvider>
-    {children}
+    <StickySectionContainer>
+      <div className='sticky-section__items'>
+        {children}
+      </div>
+      <Media query={devices.laptop}>
+        <div className='sticky-section__nav'>
+          <TimeLine />
+        </div>
+      </Media>
+    </StickySectionContainer>
   </StickyProvider>
 )

@@ -30,7 +30,7 @@ export const HorizontalScrollSection = ({ title, children, id }) => {
         setTitleItem(entries[0].target.dataset.title)
       }
     }, {
-      threshold: [0.25]
+      threshold: [0.3, 1]
     })
 
     children.forEach(element => {
