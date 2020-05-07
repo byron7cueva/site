@@ -9,7 +9,7 @@ const timeLineStyle = css`
       height: 300px;
 
       &__padding-top {
-        height: 100px;
+        height: 15px;
       }
     }
   }

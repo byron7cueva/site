@@ -24,6 +24,7 @@ Header.defaultProps = {
 export const SectionContent = styled.section`
   overflow: hidden;
   padding: 2em ${padding.block};
+  background-color: ${colorSite.light};
 
   @media ${devices.phablet} {
     .section__content {

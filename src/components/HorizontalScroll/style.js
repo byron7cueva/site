@@ -45,11 +45,12 @@ const styles = css`
   }
 `
 
-export const StickyContainer = styled.section`
+export const HorizontalScrollSectionContainer = styled.section`
   --width-section: 520vw;
 
   position: relative;
   height: calc(${widthSection} + 50vw);
+  background-color: ${color.light};
 
   h3 {
     text-align: center;
@@ -80,7 +81,7 @@ export const StickyContainer = styled.section`
   }
 `
 
-export const StickyContent = styled.article.attrs(props => ({
+export const HorizontalScrollItemContainer = styled.article.attrs(props => ({
   width: props.width || 400
 }))`
   width: ${props => props.width}px;

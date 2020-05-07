@@ -42,6 +42,5 @@ export const ExperienceContent = styled.div`
   @media ${devices.laptop} {
     border-radius: 5px;
     overflow: hidden;
-    margin: 2em 0;
   }
 `

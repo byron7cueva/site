@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 
 import { SectionHeader } from '../Section'
-import { StickyContainer, StickyContent } from './style'
+import { HorizontalScrollSectionContainer , HorizontalScrollItemContainer } from './style'
 
 export const HorizontalScrollSection = ({ title, children, id }) => {
   const [titleItem, setTitleItem] = useState(null)
@@ -39,7 +39,7 @@ export const HorizontalScrollSection = ({ title, children, id }) => {
   }, [stickySection])
 
   return (
-    <StickyContainer ref={stickySection} id={id}>
+    <HorizontalScrollSectionContainer ref={stickySection} id={id}>
       <div className='sticky-section'>
         <SectionHeader title={title} />
         <h3>{titleItem}</h3>
@@ -50,14 +50,14 @@ export const HorizontalScrollSection = ({ title, children, id }) => {
           </div>
         </div>
       </div>
-    </StickyContainer>
+    </HorizontalScrollSectionContainer>
   )
 }
 
 export const HorizontalScrollItem = ({ children, width, title }) => (
-  <StickyContent width={width} data-title={title}>
+  <HorizontalScrollItemContainer width={width} data-title={title}>
     <div className='sticky-item__content'>
       {children}
     </div>
-  </StickyContent>
+  </HorizontalScrollItemContainer>
 )

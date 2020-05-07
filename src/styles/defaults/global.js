@@ -17,6 +17,6 @@ export const defaults = css`
     font-family: ${font.content};
     font-size: ${size.text.content};
     color: ${colorSite.dark};
-    background-color: rgba(${color.rgb.gray}, 0.45);
+    background-color: ${colorSite.alternative};
   }
 `
