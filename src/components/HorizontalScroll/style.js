@@ -71,6 +71,10 @@ export const HorizontalScrollSectionContainer = styled.section`
     &, .sticky-section__background {
       height: calc(${widthSection} + 30vw);
     }
+
+    .sticky-section {
+      top: 3em;
+    }
   }
 
   @media ${devices.laptop} {

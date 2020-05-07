@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color } from '../../config/constants'
+import { color, devices } from '../../config/constants'
 import { color as colorSite, zIndex } from '../../config/siteConstants'
 
 export const MenuContainer = styled.nav`
@@ -33,20 +33,60 @@ export const MenuContainer = styled.nav`
   .menu__content {
     position: relative;
     top: 25%;
+    height: 75%;
+    padding: 0 10% 0;
+  }
+
+  .menu__content__list {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-end;
-    height: 75%;
+    height: inherit;
     width: inherit;
     list-style: none;
-    padding: 0 10% 0;
+    padding: 0;
+    margin: 0;
 
     a {
       text-decoration: none;
       color: ${colorSite.light};
       text-transform: uppercase;
       font-size: 1.1em;
+    }
+  }
+
+  @media ${devices.tablet} {
+    right: 0;
+    opacity: 1;
+    height: 3em;
+
+    .menu__content {
+      padding-right: 1em;
+      padding-left: 25%;
+      top: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu__content__list {
+      flex-direction: row;
+      justify-content: space-between;
+      height: initial;
+
+      a {
+        text-transform: initial;
+        font-weight: lighter;
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  @media ${devices.laptop} {
+    .menu__content {
+      padding-left: 45%;
     }
   }
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { zIndex } from '../../config/siteConstants'
-import { color } from '../../config/constants'
+import { color, devices } from '../../config/constants'
 import { saturationMask } from '../../styles/mixins/background'
 import pathLogo from '../../../static/img/all/pathLogo.svg'
 import logo from '../../../static/img/all/logo.svg'
@@ -13,6 +13,10 @@ export const LogoContainer = styled.div`
   left: 0;
   width: 6em;
   height: 6em;
+
+  @media ${devices.tablet} {
+    height: 3em;
+  }
 `
 
 export const Path = styled.div.attrs(props => ({
@@ -26,6 +30,10 @@ export const Path = styled.div.attrs(props => ({
   mask-size: cover;
   background-color: rgba(${color.rgb.alternative}, 0.65);
   ${saturationMask}
+
+  @media ${devices.tablet} {
+    display: none;
+  }
 `
 
 export const Logo = styled.div`
@@ -38,4 +46,9 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @media ${devices.tablet} {
+    top: 0.25em;
+    height: 2.5em;
+  }
 `

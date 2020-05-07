@@ -14,7 +14,8 @@ export const size = {
 export const devices = {
   phablet: '(min-width: 480px)',
   tablet: '(min-width: 768px)',
-  laptop: '(min-width: 1024px)'
+  laptop: '(min-width: 1024px)',
+  desktop: '(min-width: 1280px)'
 }
 
 export const desktopFirst = {

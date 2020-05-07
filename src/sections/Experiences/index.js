@@ -21,8 +21,8 @@ export const Experiences = () => {
         onChangeSticky={handleChangeSticky}
       >
         <Sticky
+          className='experiences__sticky'
           ref={stickyRef}
-          top='0'
           stuck={stuck}
         >
           <SectionHeader title={data.title} className='experiences__header' />

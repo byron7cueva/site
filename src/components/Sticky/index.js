@@ -16,8 +16,6 @@ const Sticky = React.forwardRef((props, ref) => {
     <StickyContainer
       className={classNameSticky}
       ref={ref}
-      top={props.top}
-      height={props.height}
     >
       <div className='sticky__background' />
       <div className='sticky__content'>
@@ -172,8 +170,6 @@ class StickySection extends Component {
             className='sticky-section__sticky'
             ref={this.contextValue.stickyRef}
             stuck={this.state.stuck}
-            top='3.73em'
-            height='3.5em'
           >
             <div className='sticky-section__sticky__content'>
               <p>{this.state.title}</p>

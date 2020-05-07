@@ -6,8 +6,6 @@ import { color as colorSite, zIndex } from '../../config/siteConstants'
 import { saturationMask } from '../../styles/mixins/background'
 
 export const StickyContainer = styled.div`
-  top: ${props => props.top};
-  height: ${props => props.height};
   z-index: ${zIndex.sectionSticky};
   position: sticky;
   .sticky__background {
@@ -60,6 +58,12 @@ export const StickyBoundaryContainer = styled.article`
 `
 
 export const StickySectionContainer = styled.div`
+  .sticky-section__sticky {
+    top: 3.73em;
+    height: 3.5em;
+  }
+
+
   .sticky-section__sticky__content {
     display: flex;
     justify-content: space-between;
@@ -69,12 +73,26 @@ export const StickySectionContainer = styled.div`
     height: 100%;
     
     p {
+      font-size: 0.9em;
       width: 50%;
     }
     
     p:last-of-type {
       padding-left: 1em;
       text-align: right;
+    }
+  }
+
+  @media ${devices.phablet} {
+    .sticky-section__sticky {
+      top: 4.1em;
+    }
+  }
+
+  @media ${devices.tablet} {
+    .sticky-section__sticky {
+      top: 7.1em;
+      height: 2em;
     }
   }
 

@@ -38,7 +38,7 @@ export const TimeLineContent = styled.div.attrs(() => ({
 }))`
     margin-left: 25%;
     position: sticky;
-    top: 6.5em;
+    top: 9.5em;
     ${timeLineStyle}
 `
 
