@@ -4,6 +4,7 @@ import { color, devices } from '../../config/constants'
 import { color as colorSite } from '../../config/siteConstants'
 
 export const ExperiencesContainer = styled.section`
+  padding-top: 5em;
   .experiences__sticky {
     top: 0;
   }

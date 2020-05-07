@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { margin, padding } from '../../config/siteConstants'
+import { margin } from '../../config/siteConstants'
 import { devices } from '../../config/constants'
 
 export const AboutContent = styled.div`
@@ -32,14 +32,21 @@ export const AboutContent = styled.div`
 
   @media ${devices.laptop} {
     flex-direction: row-reverse;
+    padding-left: 10%;
+    padding-right: 10%;
 
     p {
-      width: 50%;
-      padding-left: ${padding.block};
+      width: 60%;
+      padding-left: 15%;
     }
 
     .about-content__photo {
       width: 40%;
     }
+  }
+
+  @media ${devices.desktop} {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 `

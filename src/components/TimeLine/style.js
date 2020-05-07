@@ -29,6 +29,7 @@ const scollerStyle = css`
 
     &__content {
       padding-left: 1em;
+      line-height: 1.5em;
     }
   }
 `
