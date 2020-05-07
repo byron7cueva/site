@@ -6,16 +6,16 @@ export const TimeLine = ({ title, period, scrollerContainer, isScrolling }) => {
   const timelineScrollRef = useRef(null)
   const paddingTop = useRef(null)
 
-  const onScrolling = () => {
-    const boundingScroolContainer = scrollerContainer.current.getBoundingClientRect()
-    const boundingTimeLine = timelineScrollRef.current.getBoundingClientRect()
-
-    const height = Math.abs(boundingScroolContainer.top) * boundingTimeLine.height / boundingScroolContainer.height
-    paddingTop.current.style.height = `${height}px`
-
-  }
-
   useEffect(() => {
+    const onScrolling = () => {
+      const boundingScroolContainer = scrollerContainer.current.getBoundingClientRect()
+      const boundingTimeLine = timelineScrollRef.current.getBoundingClientRect()
+  
+      const height = Math.abs(boundingScroolContainer.top) * boundingTimeLine.height / boundingScroolContainer.height
+      paddingTop.current.style.height = `${height}px`
+  
+    }
+
     if (isScrolling) {
       window.addEventListener('scroll', onScrolling)
     } else {

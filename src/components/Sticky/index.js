@@ -111,10 +111,7 @@ class StickyBoundary extends Component {
  * Sticky Item component
  */
 class StickyItem extends Component {
-  constructor (props) {
-    super(props)
-  }
-
+  
   static contextType = StickyContext
 
   handleIntersection (stuck) {
@@ -165,7 +162,6 @@ class StickySection extends Component {
   }
 
   render () {
-    const classNameSticky = `sticky ${this.state.stuck ? 'sticky--stuck' : ''}`
     return (
       <StickySectionContainer>
         <div

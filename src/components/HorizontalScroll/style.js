@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components'
 
 import { color } from '../../config/siteConstants'
-import { color as colors, devices } from '../../config/constants'
+import { devices } from '../../config/constants'
 import pattern from '../../assets/img/geometryPattern.png'
 
 const widthSection = 'var(--width-section)';

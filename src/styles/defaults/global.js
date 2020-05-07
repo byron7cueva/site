@@ -1,6 +1,5 @@
 import { css } from 'styled-components'
 
-import { color } from '../../config/constants'
 import { color as colorSite , font, size } from '../../config/siteConstants'
 
 export const defaults = css`
