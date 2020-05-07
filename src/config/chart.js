@@ -5,10 +5,10 @@ export const color = {
   greenLight: '#85eba2',
   green: '#27ae60',
   greenDark: '#3abbb3',
-  yellow: '#fbf34c',
   fuchsia: '#f649a7',
   coral: '#fe6a6a',
-  orange: '#e67e22'
+  orange: '#e67e22',
+  red: '#ff5555'
 }
 
 export const theme = {

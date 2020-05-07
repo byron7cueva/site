@@ -29,7 +29,7 @@ export const BarChart = ({ data }) => (
     barComponent={BarComponent}
     theme={theme}
     layout='horizontal'
-    margin={{ top: 20, right: 30, bottom: 30, left: 0 }}
+    margin={{ top: 25, right: 35, bottom: 30, left: 0 }}
     colorBy='indexValue'
     colors={[colorChart.orange, colorChart.greenDark, colorChart.blue, colorChart.coral]}
     enableGridX

@@ -28,7 +28,7 @@ const BarComponent = props => {
 
 export const VerticalBarChart = ({ data }) => (
   <ResponsiveBar
-    margin={{ top: 10, right: 0, bottom: 30, left: 75 }}
+    margin={{ top: 10, right: 0, bottom: 35, left: 85 }}
     data={data}
     colors={[color.fuchsia, color.orange, color.blue, color.coral, color.greenDark]}
     colorBy='indexValue'

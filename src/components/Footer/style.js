@@ -7,7 +7,7 @@ export const FooterContainer = styled.footer`
   justify-content: space-between;
   color: ${color.light};
   padding: ${padding.block};
-  background-color: rgba(21,21,21, 0.8);
+  background-color: rgba(40,42,54, 0.8);
 
   .footer__networking {
     svg {

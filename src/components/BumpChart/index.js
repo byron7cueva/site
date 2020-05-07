@@ -10,7 +10,7 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
     <g transform={`translate(${x}, ${y})`} style={{ pointerEvents: 'none' }}>
       <circle
         r={size}
-        fill={`rgb(${colors.rgb.gray})`}
+        fill={`rgb(${colors.rgb.light})`}
         stroke={borderColor}
         strokeWidth={borderWidth}
       />
@@ -35,7 +35,7 @@ export const BumpChart = ({ data }) => (
     data={data}
     pointComponent={CustomPoint}
     theme={theme}
-    margin={{ top: 20, right: 150, bottom: 25, left: 150 }}
+    margin={{ top: 20, right: 150, bottom: 30, left: 150 }}
     lineWidth={4}
     activeLineWidth={5}
     inactiveLineWidth={3}
