@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 
 import { TimeLineContent, Scroller } from './style'
 
-export const TimeLine = ({ period, scrollerContainer, isScrolling }) => {
+export const TimeLine = ({ title, period, scrollerContainer, isScrolling }) => {
   const timelineScrollRef = useRef(null)
   const paddingTop = useRef(null)
 
@@ -19,12 +19,10 @@ export const TimeLine = ({ period, scrollerContainer, isScrolling }) => {
     if (isScrolling) {
       window.addEventListener('scroll', onScrolling)
     } else {
-      console.log('Liberando desde condicion')
       window.removeEventListener('scroll', onScrolling)
     }
 
     return () => {
-      console.log('Liberando desde effect')
       window.removeEventListener('scroll', onScrolling)
     }
   },
@@ -38,7 +36,8 @@ export const TimeLine = ({ period, scrollerContainer, isScrolling }) => {
         <Scroller>
           <div className='scroller__handle' />
           <div className='scroller__content'>
-            {period}
+            <p>{title}</p>
+            <p>{period}</p>
           </div>
         </Scroller>
         <div className='timeline__scroll__padding-bottom'/>

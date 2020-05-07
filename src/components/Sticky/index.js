@@ -176,7 +176,7 @@ class StickySection extends Component {
             className='sticky-section__sticky'
             ref={this.contextValue.stickyRef}
             stuck={this.state.stuck}
-            top='4.73em'
+            top='3.73em'
             height='3.5em'
           >
             <div className='sticky-section__sticky__content'>
@@ -193,6 +193,7 @@ class StickySection extends Component {
         <Media query={devices.laptop}>
           <div className='sticky-section__nav'>
             <TimeLine
+              title={this.state.title}
               period={this.state.period}
               scrollerContainer={this.stickySectionContentRef}
               isScrolling={this.props.isScolling}

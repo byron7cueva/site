@@ -1,12 +1,14 @@
 import styled, {css} from 'styled-components'
 
+import { color as colorSite } from '../../config/siteConstants'
+
 const timeLineStyle = css`
   .timeline {
     &__scroll {
       margin-top: 0.5em;
       margin-left: 0.5em;
-      border-left: 1px solid #036299;
-      height: 300px;
+      border-left: 1px solid ${colorSite.alternative};
+      height: 10em;
 
       &__padding-top {
         height: 15px;
@@ -20,7 +22,7 @@ const scollerStyle = css`
     &__handle {
       border-radius: 0.8em;
       width: 0.35em;
-      background-color: #036299;
+      background-color: ${colorSite.primary};
       height: 100%;
       float: left;
     }
@@ -34,10 +36,9 @@ const scollerStyle = css`
 export const TimeLineContent = styled.div.attrs(() => ({
   className: 'timeline'
 }))`
-    margin-left: 50%;
+    margin-left: 25%;
     position: sticky;
     top: 6.5em;
-    z-index:5;
     ${timeLineStyle}
 `
 

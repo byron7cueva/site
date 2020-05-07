@@ -94,6 +94,7 @@ export const StickySectionContainer = styled.div`
 
       &__nav {
         width: 40%;
+        padding: 8em 0;
       }
 
     }

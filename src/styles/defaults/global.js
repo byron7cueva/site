@@ -19,4 +19,22 @@ export const defaults = css`
     color: ${colorSite.dark};
     background-color: ${colorSite.alternative};
   }
+
+  ::-webkit-scrollbar-track
+  {
+	  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	  background-color: ${colorSite.alternative};
+  }
+  ::-webkit-scrollbar
+  {
+	  width: 7px;
+	  background-color: ${colorSite.alternative};
+  }
+  
+  ::-webkit-scrollbar-thumb
+  {
+	  background-color: ${colorSite.secondary};
+	  border: 1px solid #555555;
+    border-radius: 25px;
+  }
 `

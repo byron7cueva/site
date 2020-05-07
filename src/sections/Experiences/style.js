@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { devices } from '../../config/constants'
+import { color, devices } from '../../config/constants'
 import { color as colorSite } from '../../config/siteConstants'
 
 export const ExperiencesContainer = styled.section`
@@ -20,8 +20,8 @@ export const ExperiencesContainer = styled.section`
     }
 
     .sticky--stuck {
-      h2 {
-        color: ${colorSite.secondary};
+      .sticky__background {
+        background-color: rgba(${color.rgb.light}, 0.65);
       }
     }
   }

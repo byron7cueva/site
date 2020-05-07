@@ -4,7 +4,7 @@ import { devices } from '../../config/constants'
 import { color as colorSite, padding } from '../../config/siteConstants'
 
 export const Header = styled.div`
-  padding: ${padding.block} 19%;
+  padding: ${padding.content} 19%;
   width: 100%;
   text-align: right;
   background-color: ${props => props.theme.backgroundColor};
