@@ -22,13 +22,13 @@ export const ExperienceContent = styled.div`
       grid-row: 2 / 3;
       text-align: center;
     }
+  }
 
-    div {
-      grid-column: 2 / 3;
-      grid-row: 3 / 4;
-      border-left: 1px solid ${color.gray};
-      padding-left: ${padding.content};
-    }
+  .experience__position {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    border-left: 1px solid ${color.gray};
+    padding-left: ${padding.content};
   }
 
   .expereience__description {

@@ -59,7 +59,7 @@ export const StickyBoundaryContainer = styled.article`
 
 export const StickySectionContainer = styled.div`
   .sticky-section__sticky {
-    top: 3.73em;
+    top: 3.3em;
     height: 3.5em;
   }
 
@@ -68,12 +68,13 @@ export const StickySectionContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em 0 3em;
+    padding: 0 1em 0 4em;
     color: ${colorSite.light};
     height: 100%;
     
     p {
       font-size: 0.9em;
+      line-height: 1.5em;
       width: 50%;
     }
     
@@ -85,13 +86,13 @@ export const StickySectionContainer = styled.div`
 
   @media ${devices.phablet} {
     .sticky-section__sticky {
-      top: 4.1em;
+      top: 3.7em;
     }
   }
 
   @media ${devices.tablet} {
     .sticky-section__sticky {
-      top: 7.1em;
+      top: 6.67em;
       height: 2em;
     }
   }

@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { IoIosArrowDropdown } from 'react-icons/io'
 
-import nameSvg from '../../../static/img/all/name.svg'
+import nameSvg from '../../assets/img/name.svg'
 import { size, color } from '../../config/constants'
 
 export const Hero = () => {

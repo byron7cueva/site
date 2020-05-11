@@ -4,7 +4,6 @@ import { color, devices } from '../../config/constants'
 import { color as colorSite } from '../../config/siteConstants'
 
 export const ExperiencesContainer = styled.section`
-  padding-top: 5em;
   .experiences__sticky {
     top: 0;
   }
@@ -22,6 +21,7 @@ export const ExperiencesContainer = styled.section`
   }
 
   @media ${devices.laptop} {
+    padding-top: 5em;
     background-color: ${colorSite.light};
 
     .experiences__header {

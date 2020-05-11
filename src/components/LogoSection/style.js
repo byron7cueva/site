@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { zIndex } from '../../config/siteConstants'
 import { color, devices } from '../../config/constants'
 import { saturationMask } from '../../styles/mixins/background'
-import pathLogo from '../../../static/img/all/pathLogo.svg'
-import logo from '../../../static/img/all/logo.svg'
+import pathLogo from '../../assets/img/pathLogo.svg'
+import logo from '../../assets/img/logo.svg'
 
 export const LogoContainer = styled.div`
   z-index: ${zIndex.logo};

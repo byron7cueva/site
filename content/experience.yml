@@ -9,7 +9,8 @@ content:
       </p>
     initDate: 10/2015
     finishDate: 12/2017
-    cover: compu.png
+    cover: componentes.jpg
+    logo: kruger.png
   - key: 2
     position: Desarrollador de Software
     organization: Kruger Corporation
@@ -20,6 +21,7 @@ content:
     initDate: 10/2014
     finishDate: 10/2015
     cover: compu.png
+    logo: kruger.png
   - key: 3
     position: Desarrollador de Software
     organization: Gobierno Autónomo de San Miguel de Ibarra
@@ -38,3 +40,4 @@ content:
     initDate: 05/2011
     finishDate: 04/2014
     cover: fotogis.jpg
+    logo: gadi.png
