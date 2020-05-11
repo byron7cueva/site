@@ -1,5 +1,6 @@
 import { css }  from 'styled-components'
 
+import { devices } from '../../config/constants'
 import { color, font, size, margin } from '../../config/siteConstants'
 
 export const heading = css`
@@ -36,7 +37,7 @@ export const heading = css`
 
   h5 {
     color: ${color.secondary};
-    font-size: 1.3em;
+    font-size: 1.7em;
     font-weight: normal;
   }
 
@@ -44,5 +45,11 @@ export const heading = css`
     color: ${color.light};
     font-size: 1.5em;
     font-weight: normal;
+  }
+
+  @media ${devices.laptop} {
+    h5 {
+      font-size: 2em;
+    }
   }
 `

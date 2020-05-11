@@ -47,13 +47,13 @@ export const Hero = () => {
       <div className='hero__content'>
         <div>
           <h6>SOY</h6>
-          <img src={nameSvg} alt='Byron Cueva' />
+          <img className='hero__name' src={nameSvg} alt='Byron Cueva' />
           <h5>Full Stack Developer</h5>
         </div>
       </div>
       <Particles params={config} className='hero__particles' />
       <a href='#about'>
-        <IoIosArrowDropdown size={size.icon} color={`rgb(${color.rgb.light})`} />
+        <IoIosArrowDropdown size={size.icon * 1.5} color={`rgb(${color.rgb.light})`} />
       </a>
     </BackgroundImage>
   )

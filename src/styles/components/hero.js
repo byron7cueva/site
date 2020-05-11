@@ -45,6 +45,10 @@ export const heroStyle = css`
       &::before {
         background-position-x: 100% !important;
       }
+
+      &__name {
+        margin: 2em 0;
+      }
     }
   }
 `
