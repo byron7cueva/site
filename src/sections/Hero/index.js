@@ -17,7 +17,8 @@ export const Hero = () => {
   }
 
   const {
-    hero
+    hero,
+    site
   } = useStaticQuery(
     graphql`
       query {
@@ -26,6 +27,11 @@ export const Hero = () => {
             fluid(maxWidth: 1920){
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        site {
+          siteMetadata {
+            title
           }
         }
       }
@@ -47,7 +53,7 @@ export const Hero = () => {
       <div className='hero__content'>
         <div>
           <h6>SOY</h6>
-          <img className='hero__name' src={nameSvg} alt='Byron Cueva' />
+          <img className='hero__name' src={nameSvg} alt={site.siteMetadata.title} />
           <h5>Full Stack Developer</h5>
         </div>
       </div>

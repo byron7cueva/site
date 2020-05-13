@@ -1,6 +1,12 @@
 const path = require('path')
 
 module.exports = {
+  siteMetadata: {
+    title: 'Byron Cueva',
+    description: 'Soy Byron Cueva - Líder Técnico - Desarrollador Full Stack',
+    url: 'https://byron7cueva.github.io',
+    twitterUsername: '@byron7cueva'
+  },
   /* Your site config here */
   plugins: [
     'gatsby-plugin-styled-components',
@@ -22,6 +28,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp'
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet'
   ],
 }
