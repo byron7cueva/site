@@ -50,7 +50,6 @@ export const HorizontalScrollSectionContainer = styled.section`
 
   position: relative;
   height: calc(${widthSection} + 50vw);
-  background-color: ${color.light};
   padding-top: 5em;
 
   h3 {

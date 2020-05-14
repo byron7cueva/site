@@ -24,7 +24,6 @@ Header.defaultProps = {
 export const SectionContent = styled.section`
   overflow: hidden;
   padding: 5em ${padding.block} 2em;
-  background-color: ${colorSite.light};
 
   .section__content {
     margin-top: 2.5em;
