@@ -15,6 +15,9 @@ export const inputStyle = css`
     &:hover {
       border-color: ${color.grayDark};
     }
+    &.error {
+      border-left: 3px solid #ff5555;
+    }
   }
   textarea {
     height: 10em;

@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "site-web",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0 -p 8080",
@@ -15,8 +14,10 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
     "@nivo/bar": "^0.61.1",
     "@nivo/bump": "^0.61.1",
+    "apollo-boost": "^0.4.8",
     "gatsby": "^2.20.12",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.3.4",
@@ -26,10 +27,12 @@
     "gatsby-plugin-styled-components": "^3.2.3",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-sharp": "^2.4.6",
+    "graphql": "^14.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
+    "react-hook-form": "^5.7.2",
     "react-icons": "^3.9.0",
     "react-media": "^1.10.0",
     "react-particles-js": "^3.0.3",
@@ -39,12 +42,5 @@
     "eslint-config-prettier": "^6.10.1",
     "gh-pages": "^2.2.0",
     "prettier": "2.0.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

@@ -5,7 +5,8 @@ export const color = {
   light: 'var(--color-light)',
   dark: 'var(--color-dark)',
   gray: 'var(--color-gray)',
-  grayDark: 'var(--color-gray-dark)'
+  grayDark: 'var(--color-gray-dark)',
+  error: 'var(--color-error)'
 }
 
 export const size = {

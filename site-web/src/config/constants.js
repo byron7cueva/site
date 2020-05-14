@@ -22,3 +22,7 @@ export const desktopFirst = {
   tablet: '(max-width: 767px)',
   laptop: '(max-width: 1023px)'
 }
+
+export const api = {
+  url: process.env.API_URL
+}

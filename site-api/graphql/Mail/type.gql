@@ -1,0 +1,11 @@
+input MailInput {
+    name: String!
+    from: String!
+    subject: String!
+    text: String!
+}
+
+extend type Mutation {
+    "To receive contact message"
+    receiveContactMessage(input: MailInput!): Response
+}
