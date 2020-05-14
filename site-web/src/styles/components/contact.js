@@ -5,6 +5,7 @@ import { devices } from '../../config/constants'
 export const contactStyle = css`
   .contact {
     form {
+      position: relative;
       text-align: center;
     }
     &__mail {

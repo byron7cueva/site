@@ -4,6 +4,7 @@ import { gql } from 'apollo-boost'
 
 import { Section } from '../../components/Section'
 import { Alert } from '../../components/Alert'
+import { Loading } from '../../components/Loading'
 import { AlertType } from '../../config/enum'
 import { useResponseMutation } from '../../hooks/useResponseMutation'
 
@@ -32,6 +33,8 @@ export const Contact = () => {
 
   const hasError = Object.entries(errors).length !== 0
 
+  console.log('Renderizado FORMULARIO')
+
   return (
     <Section title='Escribeme' className='contact' id='contact'>
       {hasError &&
@@ -41,7 +44,7 @@ export const Contact = () => {
         <Alert type={responseType} message={responseMessage} time={5} />
       }
       <form onSubmit={handleSubmit(handleSubmitForm)} noValidate>
-        { loading && <p>Enviando...</p>}
+        <Loading show={loading} message='Enviando' />
         <div className='contact__name-email'>
           <input
             className={errors.name ? 'error' : ''}
