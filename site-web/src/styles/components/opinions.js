@@ -8,6 +8,7 @@ export const opinionsStyle = css`
     &__navigation {
       display: inline-block;
       background-color: ${color.primary};
+      padding: 0.5em;
       border-radius: 25px;
       margin: ${margin.block} 0;
       display: inline-flex;
