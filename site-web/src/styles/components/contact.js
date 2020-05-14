@@ -16,6 +16,7 @@ export const contactStyle = css`
   @media ${devices.laptop} {
     .contact__name-email {
       display: flex;
+      justify-content: space-between;
       input {
         width: 48%;
       }
