@@ -1,36 +1,45 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import { gql } from 'apollo-boost'
-import { useMutation } from '@apollo/react-hooks'
 
 import { Section } from '../../components/Section'
+import { Alert } from '../../components/Alert'
+import { AlertType } from '../../config/enum'
+import { useResponseMutation } from '../../hooks/useResponseMutation'
 
 export const Contact = () => {
   const { register, handleSubmit, errors, reset } = useForm()
   const mutation = gql`
     mutation ReceiveMessage($input: MailInput!) {
-      receiveContactMessage(input: $input) {
+      response: receiveContactMessage(input: $input) {
         message
         success
       }
     }
   `
-  const [receiveMessage, { data, loading, called }] = useMutation(mutation)
-  const handleSubmitForm = formData => {
-    receiveMessage({ variables: { input: formData}})
-  }
 
-  useEffect(() => {
-    if (!loading && data && data.receiveContactMessage.success) {
+  const handleResponse = success => {
+    if (success) {
       reset()
     }
-  },
-  [loading]
-  )
+  }
+
+  const { loading, responseMessage, responseType, sendMutation } = useResponseMutation(mutation, handleResponse)
+
+  const handleSubmitForm = formData => {
+    sendMutation({ variables: { input: formData}})
+  }
+
+  const hasError = Object.entries(errors).length !== 0
 
   return (
     <Section title='Escribeme' className='contact' id='contact'>
-      <p className='contact__mail'><i className='icon-mail' /> byron7cueva@gmail.com</p>
+      {hasError &&
+          <Alert type={AlertType.WARNING} message='Los campos marcados en rojo no se ingresaron correctamente'/>
+      }
+      { !loading && responseMessage && 
+        <Alert type={responseType} message={responseMessage} time={5} />
+      }
       <form onSubmit={handleSubmit(handleSubmitForm)} noValidate>
         { loading && <p>Enviando...</p>}
         <div className='contact__name-email'>
@@ -74,9 +83,6 @@ export const Contact = () => {
             required: 'El campo descripción es requerido'
           })}
         />
-        {Object.entries(errors).length !== 0 &&
-          <p className='alert-error'><small>Los campos marcados en rojo no se ingresaron correctamente</small></p>
-        }
         <button type='submit' className='btn'>Enviar</button>
       </form>
     </Section>

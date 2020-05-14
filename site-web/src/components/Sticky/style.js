@@ -8,13 +8,14 @@ import { saturationMask } from '../../styles/mixins/background'
 export const StickyContainer = styled.div`
   z-index: ${zIndex.sectionSticky};
   position: sticky;
+  visibility: hidden;
   .sticky__background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${colorSite.alternative};
+    
   }
 
   .sticky__content {
@@ -24,6 +25,7 @@ export const StickyContainer = styled.div`
   }
 
   &.sticky--stuck {
+    visibility: visible;
     .sticky__background {
       background-color: rgba(${color.rgb.alternative}, 0.65);
       ${saturationMask}
@@ -53,7 +55,7 @@ export const StickyBoundaryContainer = styled.article`
   }
 
   &.sticky-item {
-    padding-top: 5em;
+    padding-top: 2.5em;
   }
 `
 
@@ -82,6 +84,10 @@ export const StickySectionContainer = styled.div`
       padding-left: 1em;
       text-align: right;
     }
+  }
+
+  .sticky-section__items {
+    padding: 0 1em;
   }
 
   @media ${devices.phablet} {

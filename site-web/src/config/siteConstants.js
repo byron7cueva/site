@@ -6,6 +6,8 @@ export const color = {
   dark: 'var(--color-dark)',
   gray: 'var(--color-gray)',
   grayDark: 'var(--color-gray-dark)',
+  info: 'var(--color-info)',
+  warning: 'var(--color-warning)',
   error: 'var(--color-error)'
 }
 

@@ -4,10 +4,11 @@ import { devices } from '../../config/constants'
 import { color, padding } from '../../config/siteConstants'
 
 export const ExperienceContent = styled.div`
+  position: relative;
   background-color: ${color.alternative};
   color: ${color.light};
-  border-bottom: 1px solid ${color.secondary};
-  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 
   .experience__cover {
     position: relative;
@@ -37,10 +38,5 @@ export const ExperienceContent = styled.div`
       padding: inherit;
       background-color: rgba(117,123,157,0.16);
     }
-  }
-
-  @media ${devices.laptop} {
-    border-radius: 5px;
-    overflow: hidden;
   }
 `

@@ -6,11 +6,14 @@ import { color as colorSite } from '../../config/siteConstants'
 export const ExperiencesContainer = styled.section`
   .experiences__sticky {
     top: 0;
+    visibility: visible;
   }
 
-  .experiences__header {
-    h2 {
-      color: ${colorSite.secondary};
+  & .sticky--stuck {
+    .experiences__header {
+      h2 {
+        color: ${colorSite.secondary};
+      }
     }
   }
 
@@ -24,15 +27,15 @@ export const ExperiencesContainer = styled.section`
     padding-top: 5em;
     background-color: ${colorSite.light};
 
-    .experiences__header {
-      h2 {
-        color: ${colorSite.primary};
-      }
-    }
-
     & .sticky--stuck {
       .sticky__background {
         background-color: rgba(${color.rgb.light}, 0.65);
+      }
+
+      .experiences__header {
+        h2 {
+          color: ${colorSite.primary};
+        }
       }
     }
   }

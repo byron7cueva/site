@@ -16,7 +16,6 @@ export const defaults = css`
     font-family: ${font.content};
     font-size: ${size.text.content};
     color: ${colorSite.dark};
-    background-color: ${colorSite.alternative};
     line-height: 2em;
   }
 
