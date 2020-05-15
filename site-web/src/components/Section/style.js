@@ -7,6 +7,7 @@ export const Header = styled.div`
   padding: ${padding.content} 19%;
   width: 100%;
   text-align: right;
+  overflow: hidden;
   background-color: ${props => props.theme.backgroundColor};
 
   h2 {

@@ -16,6 +16,8 @@ module.exports = {
         fonts: [
           'Titillium Web\:300,400,600',
           'Khand\:300,400,500'
+          // 'Sirin Stencil\:300,400,500'
+
         ],
         display: 'swap'
       }

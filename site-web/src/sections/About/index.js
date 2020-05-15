@@ -34,8 +34,9 @@ export const About = () => {
   return (
     <Section title={data.title} id='about'>
       <AboutContent>
-        <p>{data.content}</p>
+        <p data-aos='fade-right' >{data.content}</p>
         <BackgroundImage
+          data-aos='fade-down-right'
           Tag='figure'
           className='about-content__photo'
           style={{

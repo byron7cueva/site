@@ -27,7 +27,7 @@ export const defaults = css`
   }
   ::-webkit-scrollbar
   {
-	  width: 7px;
+	  width: 0.7em;
 	  background-color: ${colorSite.alternative};
   }
   

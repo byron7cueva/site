@@ -24,12 +24,6 @@ export const heroStyle = css`
     &__content div {
       width: 50%;
     }
-
-    a {
-      position: absolute;
-      bottom: 1em;
-      left: 50%;
-    }
   }
 
   @media ${devices.tablet} {

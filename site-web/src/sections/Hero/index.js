@@ -2,10 +2,10 @@ import React from 'react'
 import Particles from 'react-particles-js'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import { IoIosArrowDropdown } from 'react-icons/io'
 
+import { ScrollDownButton } from '../../components/ScrollDownButton'
 import nameSvg from '../../assets/img/name.svg'
-import { size, color } from '../../config/constants'
+import { color } from '../../config/constants'
 
 export const Hero = () => {
   const config = {
@@ -53,14 +53,12 @@ export const Hero = () => {
       <div className='hero__content'>
         <div>
           <h6>SOY</h6>
-          <img className='hero__name' src={nameSvg} alt={site.siteMetadata.title} />
-          <h5>Full Stack Developer</h5>
+          <img  data-aos='fade-up' data-aos-anchor-placement='bottom-bottom' className='hero__name' src={nameSvg} alt={site.siteMetadata.title} />
+          <h5 data-aos='fade-right'>Full Stack Developer</h5>
         </div>
       </div>
       <Particles params={config} className='hero__particles' />
-      <a href='#about'>
-        <IoIosArrowDropdown size={size.icon * 1.5} color={`rgb(${color.rgb.light})`} />
-      </a>
+      <ScrollDownButton />
     </BackgroundImage>
   )
 }

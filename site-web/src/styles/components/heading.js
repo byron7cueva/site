@@ -20,6 +20,7 @@ export const heading = css`
     display: inline-block;
     font-size: ${size.text.h2};
     font-weight: lighter;
+    font-family: ${font.title};
     margin: 0;
     ::before {
       position: absolute;

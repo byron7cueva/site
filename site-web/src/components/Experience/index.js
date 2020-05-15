@@ -40,7 +40,7 @@ export const Experience = ({ position, organization, description, initDate, fini
             logo: allImageSharp {
               edges {
                 node {
-                  fixed(height: 33) {
+                  fixed(height: 50) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -49,7 +49,7 @@ export const Experience = ({ position, organization, description, initDate, fini
           }
       `}
       render={data => (
-        <ExperienceContent>
+        <ExperienceContent data-aos='flip-left'>
           
           <BackgroundImage
             className='experience__cover'

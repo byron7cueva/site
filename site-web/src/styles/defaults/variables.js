@@ -18,8 +18,8 @@ export const variables = css`
 
         /* Size */
         --size-text: 13px;
-        --size-h1: 2em;
-        --size-h2: 1.8em;
+        --size-h1: 2.3em;
+        --size-h2: 2em;
         --size-h3: 1.6em;
         --size-h4: 1.4em;
 
@@ -50,6 +50,13 @@ export const variables = css`
             /* Padding */
             --padding-content: 0.7em;
             --padding-block: 1.5em;
+        }
+    }
+
+    @media ${devices.laptop} {
+        :root {
+            /* Size */
+            --size-h2: 3em;
         }
     }
 `

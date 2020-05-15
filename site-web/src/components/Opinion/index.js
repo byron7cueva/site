@@ -25,7 +25,7 @@ export const Opinion = ({ message, link, writer, position, photo }) => {
           }
       `}
       render={data => (
-        <OpinionContainer>
+        <OpinionContainer data-aos='zoom-in-up'>
         <p className='opinion__message'>
           <IoIosQuote size={size.icon} className='opinion__message__left-quote' color={`rgb(${color.rgb.dark})`}/>
           {message}
