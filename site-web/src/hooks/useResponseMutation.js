@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/react-hooks'
 
 import { AlertType } from '../config/enum'
 
-function useResponseMutation (gql, onResponse = () => {}) {
+function useResponseMutation (gql) {
   const [responseMessage, setResponseMessage] = useState(null)
   const [responseType, setResponseType] = useState(AlertType.ERROR)
 
@@ -19,7 +19,6 @@ function useResponseMutation (gql, onResponse = () => {}) {
     if (!loading && data) {
       data.response.success ? setResponseType(AlertType.INFO) : setResponseType(AlertType.ERROR)
       setResponseMessage(data.response.message)
-      onResponse(data.response.success)
     }
   },
   [loading, error, data]

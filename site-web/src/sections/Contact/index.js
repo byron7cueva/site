@@ -21,21 +21,18 @@ export const Contact = () => {
       }
     }
   `
-
-  const handleResponse = (success) => {
-    if (success) {
-      reset()
-    }
-  }
-
   const handleChangeShowAlert = show => {
     if (!show) setMessageAlert(null)
   }
 
-  const { loading, responseMessage, responseType, sendMutation } = useResponseMutation(mutation, handleResponse)
+  const { loading, responseMessage, responseType, sendMutation } = useResponseMutation(mutation)
 
-  const handleSubmitForm = formData => {
-    sendMutation({ variables: { input: formData}})
+  const handleSubmitForm = async (formData) => {
+    let result
+    try {
+      result = await sendMutation({ variables: { input: formData}})
+      if (result.data.response.success) reset()
+    } catch (e) {}
   }
 
   useEffect(() => {
