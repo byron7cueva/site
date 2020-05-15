@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { gql } from 'apollo-boost'
 
@@ -10,6 +10,9 @@ import { useResponseMutation } from '../../hooks/useResponseMutation'
 
 export const Contact = () => {
   const { register, handleSubmit, errors, reset } = useForm()
+  const [ messageAlert, setMessageAlert ] = useState(null)
+  const [ alertType, setAlertType ] = useState(null)
+
   const mutation = gql`
     mutation ReceiveMessage($input: MailInput!) {
       response: receiveContactMessage(input: $input) {
@@ -19,10 +22,14 @@ export const Contact = () => {
     }
   `
 
-  const handleResponse = success => {
+  const handleResponse = (success) => {
     if (success) {
       reset()
     }
+  }
+
+  const handleChangeShowAlert = show => {
+    if (!show) setMessageAlert(null)
   }
 
   const { loading, responseMessage, responseType, sendMutation } = useResponseMutation(mutation, handleResponse)
@@ -31,18 +38,28 @@ export const Contact = () => {
     sendMutation({ variables: { input: formData}})
   }
 
-  const hasError = Object.entries(errors).length !== 0
+  useEffect(() => {
+    const hasError = Object.entries(errors).length !== 0
+    if (hasError) {
+      setMessageAlert('Los campos marcados en rojo no se ingresaron correctamente')
+      setAlertType(AlertType.WARNING)
+      return
+    }
 
-  console.log('Renderizado FORMULARIO')
+    if (!loading && responseMessage !== null) {
+      setMessageAlert(responseMessage)
+      setAlertType(responseType)
+      return
+    }
+    setMessageAlert(null)
+  },
+  [loading, errors, responseMessage, responseType]
+  )
+
+  const showAlert = messageAlert !== null
 
   return (
     <Section title='Escribeme' className='contact' id='contact'>
-      {hasError &&
-          <Alert type={AlertType.WARNING} message='Los campos marcados en rojo no se ingresaron correctamente'/>
-      }
-      { !loading && responseMessage && 
-        <Alert type={responseType} message={responseMessage} time={5} />
-      }
       <form onSubmit={handleSubmit(handleSubmitForm)} noValidate>
         <Loading show={loading} message='Enviando' />
         <div className='contact__name-email'>
@@ -86,6 +103,7 @@ export const Contact = () => {
             required: 'El campo descripción es requerido'
           })}
         />
+        <Alert type={alertType} message={messageAlert} isShow={showAlert} time={7} onChangeShow={handleChangeShowAlert}/>
         <button type='submit' className='btn'>Enviar</button>
       </form>
     </Section>

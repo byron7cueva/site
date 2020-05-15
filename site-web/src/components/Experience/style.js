@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { devices } from '../../config/constants'
 import { color, padding } from '../../config/siteConstants'
 
 export const ExperienceContent = styled.div`

@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { AiFillInfoCircle, AiFillCloseCircle, AiFillWarning } from 'react-icons/ai'
 import { size } from '../../config/constants'
 
 import { AlertType } from '../../config/enum'
 import { AlertContainer } from './style'
 
-const Alert = ({type = AlertType.INFO, message, time = 0}) => {
-  const [show, setShow] = useState(true)
+const Alert = ({type = AlertType.INFO, message, isShow, time, onChangeShow }) => {
   const iconSize = size.icon * 1.5
   let Icon
   
@@ -19,20 +18,30 @@ const Alert = ({type = AlertType.INFO, message, time = 0}) => {
     default: Icon = AiFillInfoCircle
   }
 
-  if (time) {
-    const timeId = setTimeout(() => {
-      setShow(false)
+  useEffect(() => {
+    let timeId
+    if (isShow && time) {
+        timeId = setTimeout(() => {
+          onChangeShow(false)
+      }, time * 1000)
+    }
+    return () => {
       clearTimeout(timeId)
-    }, time * 1000)
-  }
-
-  if (!show) return null
+    }
+  },
+  [isShow, time, onChangeShow]
+  )
 
   return (
     <AlertContainer type={type}>
-      <Icon size={iconSize} />
-      <p className='alert__message'>{message}</p>
-      </AlertContainer>
+      { isShow ? (
+        <div className='alert__content'>
+        <Icon size={iconSize} />
+        <p className='alert__message'>{message}</p>
+      </div>
+      ) : null
+     }
+    </AlertContainer>
   )
 }
 

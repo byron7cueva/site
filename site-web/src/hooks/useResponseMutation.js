@@ -22,10 +22,10 @@ function useResponseMutation (gql, onResponse = () => {}) {
       onResponse(data.response.success)
     }
   },
-  [loading]
+  [loading, error, data]
   )
 
-  return {loading, responseMessage, responseType, sendMutation}
+  return {loading, responseMessage, responseType, sendMutation }
 }
 
 export {

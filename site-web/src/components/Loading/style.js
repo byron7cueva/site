@@ -1,6 +1,6 @@
 import styled, {keyframes} from 'styled-components'
 
-import { color as colorSite, zIndex, color } from '../../config/siteConstants'
+import { color as colorSite, zIndex } from '../../config/siteConstants'
 
 const loadingKeyFrame = keyframes`
   from {
