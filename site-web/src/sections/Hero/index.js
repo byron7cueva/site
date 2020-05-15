@@ -2,6 +2,7 @@ import React from 'react'
 import Particles from 'react-particles-js'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import Typical from 'react-typical'
 
 import { ScrollDownButton } from '../../components/ScrollDownButton'
 import nameSvg from '../../assets/img/name.svg'
@@ -52,9 +53,26 @@ export const Hero = () => {
     >
       <div className='hero__content'>
         <div>
-          <h6>SOY</h6>
+          <h6>Me llamo!</h6>
           <img  data-aos='fade-up' data-aos-anchor-placement='bottom-bottom' className='hero__name' src={nameSvg} alt={site.siteMetadata.title} />
-          <h5 data-aos='fade-right'>Full Stack Developer</h5>
+          <h5 data-aos='fade-right'>
+            <Typical
+              loop={Infinity}
+              wrapper='a'
+              steps={[
+                'Hola ✌',
+                2000,
+                'Soy Desarrollador Full Stack 💻',
+                1000,
+                'Soy Desarrollador Frontend 📱 con React.js',
+                1000,
+                '💚 la tecnología y a JavaScript',
+                1000,
+                'escribeme 📧 si te puedo ayudar...',
+                2000
+              ]}
+            />
+          </h5>
         </div>
       </div>
       <Particles params={config} className='hero__particles' />
