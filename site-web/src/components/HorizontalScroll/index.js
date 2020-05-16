@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 import { SectionHeader } from '../Section'
 import { HorizontalScrollSectionContainer , HorizontalScrollItemContainer } from './style'
 
 export const HorizontalScrollSection = ({ title, children, id }) => {
-  const [titleItem, setTitleItem] = useState(null)
   const stickySection = useRef(null)
   const scrollableSection = useRef(null)
   const stickyBackground = useRef(null)
@@ -14,35 +13,25 @@ export const HorizontalScrollSection = ({ title, children, id }) => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if(window.scrollY > stickySection.current.offsetTop) {
         let xPos = window.scrollY - stickySection.current.offsetTop;
         setTraslateX(xPos * -1, scrollableSection.current);
         setTraslateX(xPos, stickyBackground.current);
       }
-    })
+    }
 
-    const children = scrollableSection.current.querySelectorAll('article')
-    
-    const observer = new window.IntersectionObserver(entries => {
-      const { isIntersecting } = entries[0]
-      if (isIntersecting) {
-        setTitleItem(entries[0].target.dataset.title)
-      }
-    }, {
-      threshold: [0.3, 1]
-    })
+    window.addEventListener('scroll', handleScroll)
 
-    children.forEach(element => {
-      observer.observe(element)
-    })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [stickySection])
 
   return (
     <HorizontalScrollSectionContainer ref={stickySection} id={id}>
       <div className='sticky-section'>
-        <SectionHeader title={title} />
-        <h3>{titleItem}</h3>
+        <SectionHeader className='sticky-section__title' title={title} />
         <div className="sticky-section__background" ref={stickyBackground}></div>
         <div className="sticky-section__overflow-mask">
           <div className="sticky-section__items" ref={scrollableSection}>
@@ -55,9 +44,12 @@ export const HorizontalScrollSection = ({ title, children, id }) => {
 }
 
 export const HorizontalScrollItem = ({ children, width, title }) => (
-  <HorizontalScrollItemContainer width={width} data-title={title}>
-    <div className='sticky-item__content'>
-      {children}
+  <HorizontalScrollItemContainer width={width}>
+    <div className='sticky-item__card'>
+      <h3 className='sticky-item__title'>{title}</h3>
+      <div className='sticky-item__content'>
+        {children}
+      </div>
     </div>
   </HorizontalScrollItemContainer>
 )

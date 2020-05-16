@@ -15,7 +15,7 @@ const CustomPoint = ({ x, y, size, borderColor, borderWidth, data, isInactive })
         strokeWidth={borderWidth}
       />
       {!isInactive &&
-        <text textAnchor='middle' y={4} fill={borderColor} style={{ fontSize: 9 }}>
+        <text textAnchor='middle' y={4} fill={borderColor} style={{ fontSize: 9 }} fontWeight='bold'>
           {formatSkills(data.value)}
         </text>}
     </g>

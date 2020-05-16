@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components'
 
 import { color } from '../../config/siteConstants'
 import { devices } from '../../config/constants'
-import pattern from '../../assets/img/geometryPattern.png'
+import pattern from '../../assets/img/stardust.png'
 
 const widthSection = 'var(--width-section)';
 
@@ -14,6 +14,10 @@ const styles = css`
     bottom: 0;
     overflow: hidden;
     height: 100vh;
+    
+    &__title {
+      margin-top: 1em;
+    }
 
     &__background {
       position: absolute;
@@ -51,25 +55,17 @@ export const HorizontalScrollSectionContainer = styled.section`
   position: relative;
   height: calc(${widthSection} + 50vw);
   padding-top: 5em;
-
-  h3 {
-    text-align: center;
-    padding: 0 10%;
-    color: ${color.alternative};
-  }
   ${styles}
 
   @media ${devices.phablet} {
-    --width-section: 440vw;
-    &, .sticky-section__background {
-      height: calc(${widthSection} + 100vw);
-    }
+    --width-section: 420vw;
   }
 
   @media ${devices.tablet} {
-    --width-section: 310vw;
+    --width-section: 280vw;
+
     &, .sticky-section__background {
-      height: calc(${widthSection} + 30vw);
+      height: calc(${widthSection});
     }
 
     .sticky-section {
@@ -78,10 +74,11 @@ export const HorizontalScrollSectionContainer = styled.section`
   }
 
   @media ${devices.laptop} {
-    --width-section: 250vw;
-    &, .sticky-section__background {
-      height: calc(${widthSection} + 15vw);
-    }
+    --width-section: 220vw;
+  }
+
+  @media ${devices.desktop} {
+    --width-section: 150vw;
   }
 `
 
@@ -89,27 +86,33 @@ export const HorizontalScrollItemContainer = styled.article.attrs(props => ({
   width: props.width || 400
 }))`
   width: ${props => props.width}px;
-  margin-left: 30vw;
+  margin-left: 15vw;
   display: flex;
   align-items: center;
   height: 100%;
 
-  .sticky-item__content {
+  .sticky-item__card {
     width: 100%;
-    height: 60vh;
+    height: 80%;
+    background-color: ${color.light};
+    box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.2);
+    padding: 2em;
   }
 
-  @media ${devices.phablet} {
-    .sticky-item__content {
-      height: 50%;
-    }
+  .sticky-item__title {
+    height: 20%;
+    text-align: center;
+    padding: 0 10%;
+    color: ${color.alternative};
+  }
+
+  .sticky-item__content {
+    height: 80%;
   }
 
   @media ${devices.tablet} {
-    margin-left: 16vw;
-  }
-
-  @media ${devices.laptop} {
-    margin-left: 45vw;
+    .sticky-item__card {
+      height: 60%;
+    }
   }
 `

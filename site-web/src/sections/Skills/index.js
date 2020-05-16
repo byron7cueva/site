@@ -9,13 +9,13 @@ import data from '../../../content/skills'
 export const Skills = () => {
   return (
     <HorizontalScrollSection title={data.title} id='skills'>
-      <HorizontalScrollItem title={data.content.languages.title} width={400}>
+      <HorizontalScrollItem title={data.content.languages.title} width={500}>
         <BarChart data={data.content.languages.data} />
       </HorizontalScrollItem>
-      <HorizontalScrollItem title={data.content.frontend.title} width={700}>
+      <HorizontalScrollItem title={data.content.frontend.title} width={750}>
         <BumpChart data={data.content.frontend.data} />
       </HorizontalScrollItem>
-      <HorizontalScrollItem title={data.content.dataTechnology.title} width={500}>
+      <HorizontalScrollItem title={data.content.dataTechnology.title} width={600}>
         <VerticalBarChart data={data.content.dataTechnology.data} />
       </HorizontalScrollItem>
     </HorizontalScrollSection>
