@@ -53,7 +53,7 @@ export const HorizontalScrollSectionContainer = styled.section`
   --width-section: 520vw;
 
   position: relative;
-  height: calc(${widthSection} + 50vw);
+  height: calc(${widthSection} + 60vw);
   padding-top: 5em;
   ${styles}
 
@@ -65,7 +65,7 @@ export const HorizontalScrollSectionContainer = styled.section`
     --width-section: 280vw;
 
     &, .sticky-section__background {
-      height: calc(${widthSection});
+      height: calc(${widthSection} + 30vw);
     }
 
     .sticky-section {
@@ -75,6 +75,10 @@ export const HorizontalScrollSectionContainer = styled.section`
 
   @media ${devices.laptop} {
     --width-section: 220vw;
+
+    &, .sticky-section__background {
+      height: calc(${widthSection});
+    }
   }
 
   @media ${devices.desktop} {
@@ -93,7 +97,7 @@ export const HorizontalScrollItemContainer = styled.article.attrs(props => ({
 
   .sticky-item__card {
     width: 100%;
-    height: 80%;
+    height: 90%;
     background-color: ${color.light};
     box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.2);
     padding: 2em;

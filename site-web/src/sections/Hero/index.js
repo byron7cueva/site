@@ -61,7 +61,7 @@ export const Hero = () => {
               wrapper='a'
               steps={[
                 'Hola ✌',
-                2000,
+                3000,
                 'Soy Desarrollador Full Stack 💻',
                 1000,
                 'Soy Desarrollador Frontend 📱 con React.js',

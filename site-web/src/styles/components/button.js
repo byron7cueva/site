@@ -15,6 +15,7 @@ export const buttonStyle = css`
     background-color: transparent;
     cursor: pointer;
     outline: none;
+    padding: 0;
   }
 
   .btn {
@@ -26,8 +27,5 @@ export const buttonStyle = css`
     color: ${color.light};
     border-radius: 24px;
     background-color: ${color.primary};
-    &:hover {
-      background: ${color.primary};
-    }
   }
 `

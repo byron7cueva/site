@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-export function useArrayNavigation (array) {
+export function useArrayNavigation (array, interval) {
   const [index, setIndex] = useState(0)
-  let item = array[index]
+  const [item, setItem] = useState(array[index])
 
   const next = () => {
     const increment = index + 1
@@ -18,9 +18,22 @@ export function useArrayNavigation (array) {
     const index = parseInt(i)
     if (index >=0 && index < array.length) {
       setIndex(index)
-      item = array[index]
+      setItem(array[index])
     }
   }
+
+  useEffect(() => {
+    let intervalId
+    if (interval) {
+      intervalId = setTimeout(() => {
+        next()
+      }, interval * 1000)
+    }
+
+    return () => {
+      clearTimeout(intervalId)
+    }
+  }, [interval, index]);
 
   return {item, index, next, prev, toIndex}
 }
