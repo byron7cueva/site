@@ -30,7 +30,7 @@ export const TimeLine = ({ title, period, scrollerContainer, isScrolling }) => {
   )
   
   return (
-    <TimeLineContent>
+    <TimeLineContent isShow={isScrolling}>
       <div className='timeline__scroll' ref={timelineScrollRef}>
         <div className='timeline__scroll__padding-top' ref={paddingTop} />
         <Scroller>

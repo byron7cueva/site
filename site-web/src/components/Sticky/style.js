@@ -57,6 +57,12 @@ export const StickyBoundaryContainer = styled.article`
   &.sticky-item {
     padding-top: 2.5em;
   }
+
+  @media ${devices.laptop} {
+    &.sticky-item {
+      padding-top: 8em;
+    }
+  }
 `
 
 export const StickySectionContainer = styled.div`

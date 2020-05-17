@@ -35,7 +35,7 @@ export const opinionsStyle = css`
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.1em;
+      padding: 0.2em;
 
       button:first-of-type {
         padding-right: 1em;

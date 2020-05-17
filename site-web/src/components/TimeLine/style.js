@@ -39,6 +39,7 @@ export const TimeLineContent = styled.div.attrs(() => ({
     margin-left: 35%;
     position: sticky;
     top: 9.5em;
+    visibility: ${props => props.isShow ? 'visible' : 'hidden'};
     ${timeLineStyle}
 `
 

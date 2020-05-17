@@ -10,7 +10,7 @@ import data from '../../../content/opinion.yml'
 
 export const Opinions = () => {
   const {item, next, prev} = useArrayNavigation(data.content, 26)
-  const sizeIcon = size.icon * 1.5
+  const sizeIcon = size.icon * 1.3
 
   return (
     <Section title={data.title} className='opinions' id='opinions'>
