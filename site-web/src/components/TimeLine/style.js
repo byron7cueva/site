@@ -6,7 +6,6 @@ const timeLineStyle = css`
   .timeline {
     &__scroll {
       margin-top: 0.5em;
-      margin-left: 0.5em;
       border-left: 1px solid ${colorSite.alternative};
       height: 10em;
 
@@ -37,7 +36,7 @@ const scollerStyle = css`
 export const TimeLineContent = styled.div.attrs(() => ({
   className: 'timeline'
 }))`
-    margin-left: 25%;
+    margin-left: 35%;
     position: sticky;
     top: 9.5em;
     ${timeLineStyle}

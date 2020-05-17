@@ -136,8 +136,8 @@ class StickySection extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: '',
-      period: '',
+      title: 'Organización',
+      period: 'Fecha',
       stuck: false
     }
 

@@ -48,7 +48,7 @@ export const MenuContainer = styled.nav`
     padding: 0;
     margin: 0;
 
-    a {
+    a, button {
       text-decoration: none;
       color: ${colorSite.light};
       text-transform: uppercase;
@@ -76,7 +76,7 @@ export const MenuContainer = styled.nav`
       justify-content: space-between;
       height: initial;
 
-      a {
+      a, button {
         text-transform: initial;
         font-weight: lighter;
         font-size: 0.9em;

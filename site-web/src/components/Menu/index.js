@@ -1,31 +1,39 @@
 import React from 'react'
+import { navigate } from '@reach/router';
 
 import { MenuContainer } from './style'
 
-export const Menu = ({ isShow, onClickItem }) => (
-  <MenuContainer className={isShow ? 'show' : ''}>
-    <div className='menu__mask' />
-    <div className='menu__content'>
-      <ul className='menu__content__list'>
-        <li>
-          <a href='#home' onClick={onClickItem} >Inicio</a>
-        </li>
-        <li>
-          <a href='#about' onClick={onClickItem} >Sobre mi</a>
-        </li>
-        <li>
-          <a href='#opinions' onClick={onClickItem}>Que opinan de mi trabajo</a>
-        </li>
-        <li>
-          <a href='#experiences' onClick={onClickItem}>Experiencia</a>
-        </li>
-        <li>
-          <a href='#skills' onClick={onClickItem}>Habilidades</a>
-        </li>
-        <li>
-          <a href='#contact' onClick={onClickItem}>Contactame</a>
-        </li>
-      </ul>
-    </div>
-  </MenuContainer>
-)
+export const Menu = ({ isShow, onClickItem }) => {
+  const internalLink = (to) => {
+    navigate(`#${to}`)
+    onClickItem(to)
+  }
+
+  return (
+    <MenuContainer className={isShow ? 'show' : ''}>
+      <div className='menu__mask' />
+      <div className='menu__content'>
+        <ul className='menu__content__list'>
+          <li>
+            <button onClick={internalLink.bind(this, 'inicio')}>Inicio</button>
+          </li>
+          <li>
+            <button onClick={internalLink.bind(this, 'about')}>Sobre mi</button>
+          </li>
+          <li>
+            <button onClick={internalLink.bind(this, 'opinions')}>Que opinan de mi trabajo</button>
+          </li>
+          <li>
+            <button onClick={internalLink.bind(this, 'experiences')}>Experiencia</button>
+          </li>
+          <li>
+            <button onClick={internalLink.bind(this, 'skills')}>Habilidades</button>
+          </li>
+          <li>
+            <button onClick={internalLink.bind(this, 'contact')}>Contactame</button>
+          </li>
+        </ul>
+      </div>
+    </MenuContainer>
+  )
+}

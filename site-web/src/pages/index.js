@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 
 import { Layout } from '../layouts/WebSite'
 import { Hero } from '../sections/Hero'
@@ -11,21 +11,16 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export default () => {
-  const [showMenu, setShowMenu] = useState(false)
-
-  const handlerClickMenuButton = () => {
-    setShowMenu(!showMenu)
-  }
-
   useEffect(() => {
-    console.log('INGRESA')
     AOS.init({
       duration: 2000
     })
   },[])
 
+  console.log('RENDERIZA')
+
   return (
-    <Layout showMenu={showMenu} onClickMenuButton={handlerClickMenuButton} onClickItemMenu={handlerClickMenuButton}>
+    <Layout>
       <Hero />
       <About />
       <Opinions />

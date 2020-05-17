@@ -1,23 +1,17 @@
 import React from 'react'
-import Media from 'react-media'
 
 import { Style } from '../../styles/main'
 import { LogoSection } from '../../components/LogoSection'
-import { MenuButton } from '../../components/MenuButton'
-import { Menu } from '../../components/Menu' 
 import { Footer } from '../../components/Footer'
-import { desktopFirst } from '../../config/constants'
 import { SEO } from '../../components/SEO'
+import { MenuContainer } from '../../components/MenuContainer'
 
-export const Layout = ({ children, showMenu, onClickMenuButton, onClickItemMenu }) => (
+export const Layout = ({ children }) => (
   <>
     <SEO />
     <Style />
     <LogoSection />
-    <Media query={desktopFirst.tablet} render={() => (
-      <MenuButton onClick={onClickMenuButton}/>
-    )}/>
-    <Menu isShow={showMenu} onClickItem={onClickItemMenu} />
+    <MenuContainer />
     <main>
       {children}
     </main>

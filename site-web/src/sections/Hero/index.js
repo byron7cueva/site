@@ -2,9 +2,9 @@ import React from 'react'
 import Particles from 'react-particles-js'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import Typical from 'react-typical'
 
 import { ScrollDownButton } from '../../components/ScrollDownButton'
+import { Typing } from '../../components/Typing'
 import nameSvg from '../../assets/img/name.svg'
 import { color } from '../../config/constants'
 
@@ -44,6 +44,14 @@ export const Hero = () => {
     hero.childImageSharp.fluid
   ]
 
+  const strings = [
+    'Hola ✌',
+    'Soy Desarrollador <strong>Full Stack</strong>💻',
+    'Soy Desarrollador <strong>Frontend React.js</strong>',
+    '💚 la tecnología y a JavaScript',
+    'escribeme 📧 si te puedo ayudar...'
+  ]
+
   return (
     <BackgroundImage
       Tag='section'
@@ -56,21 +64,11 @@ export const Hero = () => {
           <h6>Me llamo!</h6>
           <img  data-aos='fade-up' data-aos-anchor-placement='bottom-bottom' className='hero__name' src={nameSvg} alt={site.siteMetadata.title} />
           <h5 data-aos='fade-right'>
-            <Typical
-              loop={Infinity}
-              wrapper='a'
-              steps={[
-                'Hola ✌',
-                3000,
-                'Soy Desarrollador Full Stack 💻',
-                1000,
-                'Soy Desarrollador Frontend 📱 con React.js',
-                1000,
-                '💚 la tecnología y a JavaScript',
-                1000,
-                'escribeme 📧 si te puedo ayudar...',
-                2000
-              ]}
+            <Typing 
+              strings={strings}
+              typeSpeed={50}
+              backSpeed={50}
+              loop={true}
             />
           </h5>
         </div>
