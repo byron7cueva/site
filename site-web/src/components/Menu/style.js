@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { color, devices } from '../../config/constants'
-import { color as colorSite, zIndex } from '../../config/siteConstants'
+import { zIndex } from '../../config/siteConstants'
 
 export const MenuContainer = styled.nav`
   z-index: ${zIndex.menu};
@@ -47,13 +47,6 @@ export const MenuContainer = styled.nav`
     list-style: none;
     padding: 0;
     margin: 0;
-
-    a, button {
-      text-decoration: none;
-      color: ${colorSite.light};
-      text-transform: uppercase;
-      font-size: 1.1em;
-    }
   }
 
   @media ${devices.tablet} {
@@ -75,11 +68,18 @@ export const MenuContainer = styled.nav`
       flex-direction: row;
       justify-content: space-between;
       height: initial;
+    }
 
-      a, button {
-        text-transform: initial;
-        font-weight: lighter;
-        font-size: 0.9em;
+    .menu__mask {
+      background: none;
+      backdrop-filter: initial;
+    }
+
+    &.hasBackground {
+      .menu__mask {
+        background: rgba(${color.rgb.alternative}, 0.80);
+        backdrop-filter: saturate(180%) blur(20px);
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
       }
     }
   }

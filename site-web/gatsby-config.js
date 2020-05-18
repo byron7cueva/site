@@ -3,8 +3,11 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Byron Cueva',
+    titleTemplate: '%s - Byron Cueva',
     description: 'Soy Byron Cueva - Líder Técnico - Desarrollador Full Stack',
+    owner: 'Byron Cueva',
     url: 'https://byron7cueva.github.io',
+    image: '/byron-cueva.jpg',
     twitterUsername: '@byron7cueva'
   },
   /* Your site config here */

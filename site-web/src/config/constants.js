@@ -1,5 +1,6 @@
 export const color = {
   rgb: {
+    primary: '30,133,230', // #1e85e6
     alternative: '82,91,131', // #525b83
     light: '253,253,251', // #fdfdfb
     dark: '39,44,74', // #272c4a

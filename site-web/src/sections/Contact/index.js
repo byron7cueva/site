@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { gql } from 'apollo-boost'
+// import { gql } from 'apollo-boost'
+import { gql } from '@apollo/client'
 
 import { Section } from '../../components/Section'
 import { Alert } from '../../components/Alert'

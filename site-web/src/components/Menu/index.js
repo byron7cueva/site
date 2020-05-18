@@ -1,37 +1,29 @@
 import React from 'react'
 import { navigate } from '@reach/router';
 
+import { ItemMenu } from '../ItemMenu'
 import { MenuContainer } from './style'
 
-export const Menu = ({ isShow, onClickItem }) => {
+export const Menu = ({ isShow, onClickItem, hasBackground }) => {
   const internalLink = (to) => {
-    navigate(`#${to}`)
-    onClickItem(to)
+    navigate(to)
+    onClickItem()
   }
 
+  let classCss = isShow ? 'show' : ''
+  classCss = `${classCss} ${hasBackground ? 'hasBackground' : ''}`
+
   return (
-    <MenuContainer className={isShow ? 'show' : ''}>
+    <MenuContainer className={classCss}>
       <div className='menu__mask' />
       <div className='menu__content'>
         <ul className='menu__content__list'>
-          <li>
-            <button onClick={internalLink.bind(this, 'inicio')}>Inicio</button>
-          </li>
-          <li>
-            <button onClick={internalLink.bind(this, 'about')}>Sobre mi</button>
-          </li>
-          <li>
-            <button onClick={internalLink.bind(this, 'opinions')}>Que opinan de mi trabajo</button>
-          </li>
-          <li>
-            <button onClick={internalLink.bind(this, 'experiences')}>Experiencia</button>
-          </li>
-          <li>
-            <button onClick={internalLink.bind(this, 'skills')}>Habilidades</button>
-          </li>
-          <li>
-            <button onClick={internalLink.bind(this, 'contact')}>Contactame</button>
-          </li>
+          <ItemMenu to='#inicio' label='Inicio' onClick={internalLink} />
+          <ItemMenu to='#about' label='Acerca de mi' onClick={internalLink} />
+          <ItemMenu to='#opinions' label='Que opinan de mi trabajo' onClick={internalLink} />
+          <ItemMenu to='#experiences' label='Experiencia' onClick={internalLink} />
+          <ItemMenu to='#skills' label='Habilidades' onClick={internalLink} />
+          <ItemMenu to='#contact' label='Contactame' onClick={internalLink} />
         </ul>
       </div>
     </MenuContainer>

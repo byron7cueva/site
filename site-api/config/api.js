@@ -1,4 +1,4 @@
 module.exports = {
-    port: process.env.API_PORT,
+    port: process.env.PORT,
     corsOrigin: process.env.CORS_ORIGIN
 }

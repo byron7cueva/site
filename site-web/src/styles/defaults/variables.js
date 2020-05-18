@@ -5,7 +5,7 @@ import { color, devices } from '../../config/constants'
 export const variables = css`
     :root {
         /* Color */
-        --color-primary : #1e85e6;
+        --color-primary: rgb(${color.rgb.primary});
         --color-secondary: #1dd1a1;
         --color-alternative: rgb(${color.rgb.alternative});
         --color-light: rgb(${color.rgb.light});

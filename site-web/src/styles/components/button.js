@@ -1,10 +1,21 @@
 import { css } from 'styled-components'
 
-import { color } from '../../config/siteConstants'
+import { color, font } from '../../config/siteConstants'
+import { color as colors } from '../../config/constants'
 
 export const buttonStyle = css`
   button, a {
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
+    font-family: ${font.content};
+  }
+
+  a {
+    color: ${color.primary};
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    :hover {
+      border-bottom: 1px solid ${color.primary};
+    }
   }
 
   button {
@@ -26,6 +37,10 @@ export const buttonStyle = css`
     transition-timing-function: ease-out;
     color: ${color.light};
     border-radius: 24px;
-    background-color: ${color.primary};
+    background-color: rgba(${colors.rgb.primary}, 0.9);
+
+    :hover {
+      background-color: rgba(${colors.rgb.primary}, 1);
+    }
   }
 `

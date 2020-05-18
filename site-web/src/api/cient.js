@@ -1,8 +1,13 @@
-import ApolloClient from 'apollo-boost'
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
 import { api } from '../config/constants'
+import fetch from 'isomorphic-fetch'
 
 const client = new ApolloClient({
-  uri: api.url
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    fetch,
+    uri: api.url
+  })
 })
 
 export {
